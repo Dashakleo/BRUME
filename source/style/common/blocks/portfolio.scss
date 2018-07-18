@@ -43,7 +43,7 @@
   flex: 1;
   background: no-repeat center left/cover;
   position: relative;
-  &:after {
+  &:before {
     content: '';
     display: block;
     background-color: #182c3d;
@@ -69,4 +69,23 @@
       opacity: 0;
     }
   }
+}
+
+.portfolio-slider__title {
+  color: white;
+  position: absolute;
+  top: 30px;
+  left:25px;
+  max-width: 150px;
+  @include raleway(600);
+
+}
+
+.portfolio-slider__type {
+  color: white;
+  position: absolute;
+  bottom: 95px;
+  left: -40px;
+  @include raleway(600);
+  transform: rotate(-90deg);
 }
