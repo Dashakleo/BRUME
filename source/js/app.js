@@ -1,4 +1,3 @@
-
 let slidesPortfolio = [{
     type: 'Дизайн интерьера',
     title: 'Дизайн интерьера гостинной',
@@ -9,16 +8,28 @@ let slidesPortfolio = [{
     img: 'url(./assets/img/portfolio2.jpg)'
 }, {
     type: 'Дизайн интерьера',
-    title: 'Дизайн интерьера гостинной',
+    title: 'Дизайн столовой в стиле «Бохо»',
     img: 'url(./assets/img/portfolio3.jpg)'
 }, {
     type: 'Дизайн интерьера',
-    title: 'Дизайн интерьера гостинной',
+    title: 'Лофт интерьер для отеля Hiloft',
     img: 'url(./assets/img/portfolio4.jpg)'
 },{
+    type: 'Дизайн интерьера',
+    title: 'Дизайн интерьера гостинной',
+    img: 'url(./assets/img/portfolio1.jpg)'
+}, {
     type: 'Отделочная работа',
     title: 'Дизайн интерьера гостинной',
     img: 'url(./assets/img/portfolio2.jpg)'
+}, {
+    type: 'Дизайн интерьера',
+    title: 'Дизайн столовой в стиле «Бохо»',
+    img: 'url(./assets/img/portfolio3.jpg)'
+}, {
+    type: 'Дизайн интерьера',
+    title: 'Лофт интерьер для отеля Hiloft',
+    img: 'url(./assets/img/portfolio4.jpg)'
 }];
 
 let slidesPortfol = Array.prototype.slice.call(slidesPortfolio);
@@ -58,13 +69,15 @@ const slidesRender = async (slidesPortfolio, count = 4) => {
     slidesEl.appendChild(slideList);
 
     let glide = new Glide('.glide', {
-        type: 'carousel',
+        type: 'slider',
         perView: count,
+        bound: true,
         startAt: 0,
         gap: 0
     });
     glide.mount();
 
+    //Прячет тип и тайтл при наведении
     document.querySelector('.portfolio-slider').onmouseover = document.querySelector('.portfolio-slider').onmouseout = handler;
     function handler(event) {
         let otherSlides = document.querySelectorAll('.glide__slide.portfolio-slider__item');
@@ -72,10 +85,6 @@ const slidesRender = async (slidesPortfolio, count = 4) => {
         let children = event.target.children;
         children = Array.prototype.slice.call(children);
         if (event.type == 'mouseover') {
-            // otherSlides.forEach((slide) => {
-            //     console.log(slide)
-            //     slide.style.width = '50px';
-            // });
             children.forEach((child) => {
                 child.hidden = true;
             })
