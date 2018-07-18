@@ -1,0 +1,50 @@
+.feedback-block {
+  padding-top: 130px;
+  margin-bottom: 160px;
+}
+
+.feedback__title {
+  margin-bottom: 90px;
+}
+
+.feedback {
+  width: 792px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.feedback__item {
+  width: 652px;
+  height: 273px;
+  background-color: white;
+  padding-top: 54px;
+  padding-left: 71px;
+  position: relative;
+  margin-right: 100px;
+}
+
+.feedback__name {
+  @include raleway(600);
+  font-size: 22px;
+  color: #313131;
+  margin-bottom: 15px;
+}
+
+.feedback__servece {
+  @include raleway(700);
+  color: #efb172;
+  margin-bottom: 30px;
+}
+
+.feedback__text {
+  line-height: 25px;
+  padding-right: 140px;
+}
+
+.feedback__avatar {
+  width: 215px;
+  height: 192px;
+  overflow: hidden;
+  @include centered(y);
+  right: -140px;
+}

@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-size: 16px;
+  background-color: #fdfaf3;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  @include raleway(300);
+  color: #5e5e5e;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+h1 {
+  color: white;
+  font-size: 61px;
+  @include playfair(700);
+}
+
+h2 {
+  color: #00203a;
+  font-size: 45px;
+  @include playfair(700);
+
+}
+
+h4 {
+  font-size: 22px;
+  @include raleway(600);
+  color: #1a292f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+

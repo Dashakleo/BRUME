@@ -1,0 +1,23 @@
+.footer-block {
+  background-color: #182c3d;
+  height: 255px;
+  color: #ffc487;
+  @include raleway(500);
+}
+
+.footer {
+  height: 255px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copy {
+}
+
+.footer__design {
+}
+
+.footer__logo {
+  text-align: center;
+}

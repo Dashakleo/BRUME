@@ -1,0 +1,12 @@
+//folders
+gulp
+node_modules
+psd
+
+
+.git
+.idea
+package.json
+package-lock.json
+gulpfile.js
+.gitignore

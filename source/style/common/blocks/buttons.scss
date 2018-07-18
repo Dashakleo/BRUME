@@ -1,0 +1,45 @@
+button {
+  border: 1px solid white;
+  color: white;
+  background-color: rgba(0,0,0,0);
+  text-transform: uppercase;
+  @include raleway(800);
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    background-color: #f6a159;
+  }
+}
+
+.button-header {
+  height: 56px;
+  padding: 0 29px;
+  display: flex;
+  &__arrow {
+    background: url(../img/svg/arrow-right.svg) no-repeat center right;
+    width: 40px;
+    height: 10px;
+    margin-top: 3px;
+    margin-left: 22px;
+  }
+}
+
+.button-customer {
+  width: 100%;
+  height: 64px;
+  margin: 20px 0;
+  font-size: 15px;
+}
+
+.button-services {
+  width: 217px;
+  height: 56px;
+  border: 2px solid #00203a;
+  color: #00203a;
+  &:hover {
+    background-color: #f6a159;
+    color: white;
+    border-color: white;
+  }
+}

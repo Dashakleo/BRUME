@@ -1,0 +1,32 @@
+.advantages {
+  height: 400px;
+  display: flex;
+  margin-top: 130px;
+  align-items: flex-start;
+  margin-bottom: 115px;
+}
+
+.advantage {
+  flex: 1;
+  &:not(:last-child) {
+     margin-right: 45px;
+   }
+  &:nth-child(2n) {
+    align-self: flex-end;
+  }
+
+  & p {
+    @include raleway(300);
+    color: #838383;
+    margin-top: 20px;
+    line-height: 25px;
+  }
+}
+
+.advantage__count {
+  color: #fea052;
+  @include playfair(700);
+  font-size: 61px;
+  opacity: 0.26;
+  margin-bottom: 10px;
+}

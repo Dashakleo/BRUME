@@ -1,0 +1,44 @@
+.header{
+  height: 700px;
+}
+
+.hower {
+  height: 770px;
+  background-color: #112537;
+  opacity: 0.97;
+  width: 50%;
+  position: absolute;
+  z-index: 10;
+}
+
+.top-bar {
+  @extend %clearfix;
+  z-index: 15;
+  position: relative;
+  padding-bottom: 33px;
+
+}
+
+.top-bar__menu{
+  margin-top: 30px;
+  float: left;
+  margin-left: 7px;
+}
+
+.top-bar__logo {
+  margin-top: 22px;
+  @include centered(x);
+}
+
+.top-bar__tel {
+  margin-top: 30px;
+  float: right;
+  font-size: 14px;
+  font-family: 'Sansus Webissimo';
+  background: url(../img/svg/phone.svg) no-repeat center left;
+  padding-left: 22px;
+
+  &-icon {
+    margin-right: 10px;
+  }
+}
