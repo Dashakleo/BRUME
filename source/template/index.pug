@@ -65,6 +65,7 @@ html(lang='en')
                         .advantage__count 04
                         h4 Работаем на выгодных условиях
                         p Ценовая политика студии очень лояльна,  мы осуществляем контроль всего процесса работы  и получаем результат который делает клиентов счастивыми
+
         section
             .container
                 .portfolio
@@ -76,20 +77,37 @@ html(lang='en')
                             a(href='#').portfolio-tabs__link Дизайн интерьеров
                         li.portfolio-tabs__item
                             a(href='#').portfolio-tabs__link Отделочные работы
-                    ul.portfolio-slider
-                        li.portfolio-slider__item(style='background-image: url(./assets/img/portfolio1.jpg)')
-                            .portfolio-slider__title Дизайн интерьера гостинной
-                            .portfolio-slider__type Дизайн интерьера
-                        li.portfolio-slider__item.portfolio-slider__item_active(style='background-image: url(./assets/img/portfolio2.jpg)')
-                            .portfolio-slider__title Дизайн интерьера гостинной
-                            .portfolio-slider__type Дизайн интерьера
-                        li.portfolio-slider__item(style='background-image: url(./assets/img/portfolio3.jpg)')
-                            .portfolio-slider__title Дизайн столовой в стиле «Бохо»
-                            .portfolio-slider__type Дизайн интерьера
-                        li.portfolio-slider__item(style='background-image: url(./assets/img/portfolio4.jpg)')
-                            .portfolio-slider__title Лофт интерьер для отеля Hiloft
-                            .portfolio-slider__type Дизайн интерьера
-
+                    .glide
+                        .glide__track(data-glide-el="track")
+                            ul.glide__slides.portfolio-slider
+                                li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio1.jpg)')
+                                    .portfolio-slider__title Дизайн интерьера гостинной
+                                    .portfolio-slider__type Дизайн интерьера
+                                li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio2.jpg)')
+                                    .portfolio-slider__title Дизайн интерьера гостинной
+                                    .portfolio-slider__type Дизайн интерьера
+                                li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio3.jpg)')
+                                    .portfolio-slider__title Дизайн столовой в стиле «Бохо»
+                                    .portfolio-slider__type Дизайн интерьер
+                                li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio4.jpg)')
+                                    .portfolio-slider__title Лофт интерьер для отеля Hiloft
+                                    .portfolio-slider__type Дизайн интерьера
+                        .glide__arrows(data-glide-el="controls")
+                            a.glide__arrow.glide__arrow--left.arrow--left(data-glide-dir="<")
+                            a.glide__arrow.glide__arrow--right.arrow--right(data-glide-dir=">")
+                    //ul.portfolio-slider
+                    //    li.portfolio-slider__item(style='background-image: url(./assets/img/portfolio1.jpg)')
+                    //        .portfolio-slider__title Дизайн интерьера гостинной
+                    //        .portfolio-slider__type Дизайн интерьера
+                    //    li.portfolio-slider__item.portfolio-slider__item_active(style='background-image: url(./assets/img/portfolio2.jpg)')
+                    //        .portfolio-slider__title Дизайн интерьера гостинной
+                    //        .portfolio-slider__type Дизайн интерьера
+                    //    li.portfolio-slider__item(style='background-image: url(./assets/img/portfolio3.jpg)')
+                    //        .portfolio-slider__title Дизайн столовой в стиле «Бохо»
+                    //        .portfolio-slider__type Дизайн интерьера
+                    //    li.portfolio-slider__item(style='background-image: url(./assets/img/portfolio4.jpg)')
+                    //        .portfolio-slider__title Лофт интерьер для отеля Hiloft
+                    //        .portfolio-slider__type Дизайн интерьера
 
 
         section

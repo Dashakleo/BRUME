@@ -33,14 +33,16 @@
 }
 
 .portfolio-slider {
-  display: flex;
   height: 553px;
   width: 100%;
+  display: flex;
 }
 
 .portfolio-slider__item {
-  height: 100%;
+  transition: all 0.5s ease;
+  float: left;
   flex: 1;
+  height: 100%;
   background: no-repeat center left/cover;
   position: relative;
   &:before {
@@ -52,7 +54,7 @@
     height: 100%;
   }
   &:hover {
-    flex: 2;
+    flex: 1.4;
     &:before {
       content: url("../img/svg/plus.svg");
       line-height: 113px;
@@ -71,12 +73,28 @@
   }
 }
 
+.arrow--left {
+  border: none;
+  height: 50px;
+  width: 45px;
+  box-shadow: none;
+  background: url("../img/arrow2.png") no-repeat center center;
+}
+.arrow--right {
+  background: url("../img/arrow1.png") no-repeat center center;
+  border: none;
+  width: 45px;
+  height: 50px;
+  box-shadow: none;
+}
+
+
 .portfolio-slider__title {
   color: white;
   position: absolute;
   top: 30px;
   left:25px;
-  max-width: 150px;
+  max-width: 154px;
   @include raleway(600);
 
 }
