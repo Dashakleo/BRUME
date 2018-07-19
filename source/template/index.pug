@@ -100,29 +100,74 @@ html(lang='en')
             .container
                 h2.services__title Наши услуги
                 .services
-                    ul.services__menu
+                    ul.services__menu#servicesTabs
                         li.services__item
-                            a(href='#').services__link Дизайн жилого помещения
+                            a( onclick="serviceTab(event, 'roomsTab')").services__link Дизайн жилого помещения
                         li.services__item
-                            a(href='#').services__link Дизайн отельных комнат
+                            a( onclick="serviceTab(event, 'roomTab')").services__link Дизайн отельных комнат
                         li.services__item.services__item_active
-                            a(href='#').services__link.services__link_active Дизайн коммерческих объектов
+                            a(onclick="serviceTab(event, 'commercialTab')").services__link#defaultService Дизайн коммерческих объектов
                         li.services__item
-                            a(href='#').services__link Ремонт под ключ
+                            a( onclick="serviceTab(event, 'keyTab')").services__link Ремонт под ключ
                         li.services__item
-                            a(href='#').services__link Отделочные работы
+                            a( onclick="serviceTab(event, 'finishingTab')").services__link Отделочные работы
                         li.services__item
-                            a(href='#').services__link Выезд дизайнера на дом
+                            a( onclick="serviceTab(event, 'homeTab')").services__link Выезд дизайнера на дом
                     .services__content
-                        .services__image
-                            img(src=('./assets/img/services1.jpg'))
-                        .services__titles
-                            .services__subtitle Дизайн коммерческих объектов
-                            p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
-                        .services__description
-                            .services__count 532 проекта
-                            button.button-services Консультация
-
+                        .services__tabcontent#roomsTab
+                            .services__image
+                                img(src=('./assets/img/services1.jpg'))
+                            .services__titles
+                                .services__subtitle Дизайн жилого помещения
+                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                            .services__description
+                                .services__count 12 проектов
+                                button.button-services Консультация
+                        .services__tabcontent#roomTab
+                            .services__image
+                                img(src=('./assets/img/services1.jpg'))
+                            .services__titles
+                                .services__subtitle Дизайн отельных комнат
+                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                            .services__description
+                                .services__count 442 проекта
+                                button.button-services Консультация
+                        .services__tabcontent#commercialTab
+                            .services__image
+                                img(src=('./assets/img/services1.jpg'))
+                            .services__titles
+                                .services__subtitle Дизайн коммерческих объектов
+                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                            .services__description
+                                .services__count 532 проекта
+                                button.button-services Консультация
+                        .services__tabcontent#keyTab
+                            .services__image
+                                img(src=('./assets/img/services1.jpg'))
+                            .services__titles
+                                .services__subtitle Ремонт под ключ
+                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                            .services__description
+                                .services__count 3211 проектов
+                                button.button-services Консультация
+                        .services__tabcontent#finishingTab
+                            .services__image
+                                img(src=('./assets/img/services1.jpg'))
+                            .services__titles
+                                .services__subtitle Отделочные работы
+                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                            .services__description
+                                .services__count 554 проекта
+                                button.button-services Консультация
+                        .services__tabcontent#homeTab
+                            .services__image
+                                img(src=('./assets/img/services1.jpg'))
+                            .services__titles
+                                .services__subtitle Выезд дизайнера на дом
+                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                            .services__description
+                                .services__count 532 проекта
+                                button.button-services Консультация
         section
             .video
                 .video__text

@@ -141,3 +141,25 @@ portfolioFinishing.addEventListener('click', (e) => {
     if (count > 4) count = 4;
     slidesRender(sortedSlides,count);
 });
+
+
+//Наши услуги
+function serviceTab(event, tabName) {
+    let i, tabcontent, tablinks;
+
+    tabcontent = document.querySelectorAll(".services__tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].hidden = true;
+    }
+
+    tablinks = document.querySelectorAll(".services__link");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove('services__link_active');
+        tablinks[i].parentNode.classList.remove('services__item_active');
+    }
+
+    document.querySelector(`#${tabName}`).hidden = false;
+    event.currentTarget.classList.add('services__link_active');
+    event.currentTarget.parentNode.classList.add('services__item_active');
+}
+document.querySelector('#defaultService').click();

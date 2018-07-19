@@ -108,23 +108,80 @@
       <div class="container">
         <h2 class="services__title">Наши услуги</h2>
         <div class="services">
-          <ul class="services__menu">
-            <li class="services__item"><a class="services__link" href="#">Дизайн жилого помещения</a></li>
-            <li class="services__item"><a class="services__link" href="#">Дизайн отельных комнат</a></li>
-            <li class="services__item services__item_active"><a class="services__link services__link_active" href="#">Дизайн коммерческих объектов</a></li>
-            <li class="services__item"><a class="services__link" href="#">Ремонт под ключ</a></li>
-            <li class="services__item"><a class="services__link" href="#">Отделочные работы</a></li>
-            <li class="services__item"><a class="services__link" href="#">Выезд дизайнера на дом</a></li>
+          <ul class="services__menu" id="servicesTabs">
+            <li class="services__item"><a class="services__link" onclick="serviceTab(event, 'roomsTab')">Дизайн жилого помещения</a></li>
+            <li class="services__item"><a class="services__link" onclick="serviceTab(event, 'roomTab')">Дизайн отельных комнат</a></li>
+            <li class="services__item services__item_active"><a class="services__link" onclick="serviceTab(event, 'commercialTab')" id="defaultService">Дизайн коммерческих объектов</a></li>
+            <li class="services__item"><a class="services__link" onclick="serviceTab(event, 'keyTab')">Ремонт под ключ</a></li>
+            <li class="services__item"><a class="services__link" onclick="serviceTab(event, 'finishingTab')">Отделочные работы</a></li>
+            <li class="services__item"><a class="services__link" onclick="serviceTab(event, 'homeTab')">Выезд дизайнера на дом</a></li>
           </ul>
           <div class="services__content">
-            <div class="services__image"><img src="./assets/img/services1.jpg"></div>
-            <div class="services__titles">
-              <div class="services__subtitle">Дизайн коммерческих объектов</div>
-              <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+            <div class="services__tabcontent" id="roomsTab">
+              <div class="services__image"><img src="./assets/img/services1.jpg"></div>
+              <div class="services__titles">
+                <div class="services__subtitle">Дизайн жилого помещения</div>
+                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+              </div>
+              <div class="services__description">
+                <div class="services__count">12 проектов</div>
+                <button class="button-services">Консультация</button>
+              </div>
             </div>
-            <div class="services__description">
-              <div class="services__count">532 проекта</div>
-              <button class="button-services">Консультация</button>
+            <div class="services__tabcontent" id="roomTab">
+              <div class="services__image"><img src="./assets/img/services1.jpg"></div>
+              <div class="services__titles">
+                <div class="services__subtitle">Дизайн отельных комнат</div>
+                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+              </div>
+              <div class="services__description">
+                <div class="services__count">442 проекта</div>
+                <button class="button-services">Консультация</button>
+              </div>
+            </div>
+            <div class="services__tabcontent" id="commercialTab">
+              <div class="services__image"><img src="./assets/img/services1.jpg"></div>
+              <div class="services__titles">
+                <div class="services__subtitle">Дизайн коммерческих объектов</div>
+                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+              </div>
+              <div class="services__description">
+                <div class="services__count">532 проекта</div>
+                <button class="button-services">Консультация</button>
+              </div>
+            </div>
+            <div class="services__tabcontent" id="keyTab">
+              <div class="services__image"><img src="./assets/img/services1.jpg"></div>
+              <div class="services__titles">
+                <div class="services__subtitle">Ремонт под ключ</div>
+                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+              </div>
+              <div class="services__description">
+                <div class="services__count">3211 проектов</div>
+                <button class="button-services">Консультация</button>
+              </div>
+            </div>
+            <div class="services__tabcontent" id="finishingTab">
+              <div class="services__image"><img src="./assets/img/services1.jpg"></div>
+              <div class="services__titles">
+                <div class="services__subtitle">Отделочные работы</div>
+                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+              </div>
+              <div class="services__description">
+                <div class="services__count">554 проекта</div>
+                <button class="button-services">Консультация</button>
+              </div>
+            </div>
+            <div class="services__tabcontent" id="homeTab">
+              <div class="services__image"><img src="./assets/img/services1.jpg"></div>
+              <div class="services__titles">
+                <div class="services__subtitle">Выезд дизайнера на дом</div>
+                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+              </div>
+              <div class="services__description">
+                <div class="services__count">532 проекта</div>
+                <button class="button-services">Консультация</button>
+              </div>
             </div>
           </div>
         </div>
