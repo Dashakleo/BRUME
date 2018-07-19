@@ -18,11 +18,39 @@
   padding-bottom: 33px;
 
 }
-
-.top-bar__menu{
+.top-bar__menu-icon{
   margin-top: 30px;
   float: left;
   margin-left: 7px;
+}
+
+.top-bar__menu {
+  background: #112537;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  animation: fadeEffect 0.4s;
+}
+.menu__content {
+  @include centered();
+  text-align: center;
+}
+.menu__item {
+  cursor: pointer;
+  display: block;
+  color: white;
+  opacity: 0.5;
+  @include raleway(600);
+  font-size: 20px;
+  text-transform: uppercase;
+  &:not(:last-child) {
+    margin-bottom: 45px;
+  }
+  &:hover {
+    color: #f8a25a;
+    opacity: 1;
+  }
 }
 
 .top-bar__logo {

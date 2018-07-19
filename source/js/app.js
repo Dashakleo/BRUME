@@ -163,3 +163,17 @@ function serviceTab(event, tabName) {
     event.currentTarget.parentNode.classList.add('services__item_active');
 }
 document.querySelector('#defaultService').click();
+
+//menu
+function openMenu(x) {
+    let menu = document.querySelector('#top-bar__menu');
+    x.classList.toggle("change");
+    menu.hidden ? menu.hidden = false : menu.hidden = true
+}
+
+let menuItem = document.querySelectorAll('.menu__item');
+for (let i = 0; i < menuItem.length; i++) {
+    menuItem[i].addEventListener('click', (event) => {
+        document.querySelector('#top-bar__menu-icon').click();
+    })
+}

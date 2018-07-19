@@ -15,13 +15,21 @@
     <link rel="stylesheet" href="assets/css/app.css">
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="hower"></div>
       <div class="container">
-        <div class="top-bar"><a class="top-bar__menu" href="#"><img src="./assets/img/svg/menu.svg"></a><img class="top-bar__logo" src="./assets/img/svg/logo.svg">
+        <div class="top-bar">
+          <div class="top-bar__menu-icon menu-icon" id="top-bar__menu-icon" onclick="openMenu(this)">
+            <div class="menu-icon__bar1"></div>
+            <div class="menu-icon__bar2"></div>
+            <div class="menu-icon__bar3"></div>
+          </div><img class="top-bar__logo" src="./assets/img/svg/logo.svg">
           <div class="top-bar__tel">+7 (800) 823  48 88</div>
         </div>
-        <div class="slider"><img class="slider__img" src="./assets/img/header.jpg">
+        <div class="slider">
+          <div class="top-bar__menu" id="top-bar__menu" hidden="true">
+            <div class="menu__content"><a class="menu__item">Главная</a><a class="menu__item" href="#advantages">Преимущества</a><a class="menu__item" href="#portfolio">Портфолио</a><a class="menu__item" href="#services">Наши услуги</a><a class="menu__item" href="#customer">Контакты</a></div>
+          </div><img class="slider__img" src="./assets/img/header.jpg">
           <div class="slider__block">
             <div class="slider__headers">
               <h1>Дизайн интерьеров</h1>
@@ -47,7 +55,7 @@
         </div>
       </div>
     </header>
-    <section>
+    <section id="advantages">
       <div class="container">
         <ul class="advantages">
           <li class="advantage">
@@ -73,7 +81,7 @@
         </ul>
       </div>
     </section>
-    <section>
+    <section id="portfolio">
       <div class="container">
         <div class="portfolio">
           <h2>Портфолио</h2>
@@ -104,7 +112,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="services">
       <div class="container">
         <h2 class="services__title">Наши услуги</h2>
         <div class="services">
@@ -246,7 +254,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="customer">
       <div class="customer">
         <div class="customer__background"></div>
         <div class="customer__img"></div>
