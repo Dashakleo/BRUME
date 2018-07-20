@@ -13,7 +13,8 @@ html(lang='en')
         link(href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;subset=cyrillic" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800" rel="stylesheet")
 
-        link(rel='stylesheet' href='assets/css/foundation.css')
+        link(rel='stylesheet' href='assets/css/foundation.css').
+
         link(rel='stylesheet' href='assets/css/app.css')
 
 
@@ -36,23 +37,19 @@ html(lang='en')
                             a(href='#portfolio').menu__item Портфолио
                             a(href='#services').menu__item Наши услуги
                             a(href='#customer').menu__item Контакты
-                    img(src="./assets/img/header.jpg").slider__img
+                    .slider__img-block
+                        img(src="./assets/img/header.jpg").slider__img
+                        img(src="./assets/img/header2.jpg").slider__img
+                        img(src="./assets/img/header3.jpg").slider__img
+                        img(src="./assets/img/header4.jpg").slider__img
+                        img(src="./assets/img/header5.jpg").slider__img
                     .slider__block
                         .slider__headers
                             h1 Дизайн интерьеров
                             .slider__subtitle Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом
-                            button.button-header Заказать дизайн
+                            button.button.button-header Заказать дизайн
                 .slider__bottom
                     include ./common/socials
-                    ul.slider-buttons
-                        li.slider-buttons__item.slider-buttons__item_active
-                            a(href='#').slider-buttons__link
-                        li.slider-buttons__item
-                            a(href='#').slider-buttons__link
-                        li.slider-buttons__item
-                            a(href='#').slider-buttons__link
-                        li.slider-buttons__item
-                            a(href='#').slider-buttons__link
         section#advantages
             .container
                 ul.advantages
@@ -73,12 +70,12 @@ html(lang='en')
             .container
                 h2 Портфолио
                 ul.portfolio-tabs
-                    li.portfolio-tabs__item#portfolioAll
-                        a(href='#').portfolio-tabs__link.portfolio-tabs__link_active Все проекты
-                    li.portfolio-tabs__item#portfolioInterior
-                        a(href='#').portfolio-tabs__link Дизайн интерьеров
-                    li.portfolio-tabs__item#portfolioFinishing
-                        a(href='#').portfolio-tabs__link Отделочные работы
+                    li.portfolio-tabs__item
+                        a(href='#').portfolio-tabs__link.portfolio-tabs__link_active#portfolioAll Все проекты
+                    li.portfolio-tabs__item
+                        a(href='#').portfolio-tabs__link#portfolioInterior Дизайн интерьеров
+                    li.portfolio-tabs__item
+                        a(href='#').portfolio-tabs__link#portfolioFinishing Отделочные работы
                 .glide
                     .glide__track(data-glide-el="track")
                         ul.glide__slides.portfolio-slider
@@ -125,61 +122,60 @@ html(lang='en')
                                     p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
                                 .services__description
                                     .services__count 12 проектов
-                                    button.button-services Консультация
+                                    button.button.button-services Консультация
                         .services__tabcontent#roomTab
                             .services__image
-                                img(src=('./assets/img/services1.jpg'))
+                                img(src=('./assets/img/services2.jpg'))
                             .services__bottom
                                 .services__titles
                                     .services__subtitle Дизайн отельных комнат
                                     p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
                                 .services__description
                                     .services__count 442 проекта
-                                    button.button-services Консультация
+                                    button.button.button-services Консультация
                         .services__tabcontent#commercialTab
                             .services__image
-                                img(src=('./assets/img/services1.jpg'))
+                                img(src=('./assets/img/services3.jpg'))
                             .services__bottom
                                 .services__titles
                                     .services__subtitle Дизайн коммерческих объектов
                                     p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
                                 .services__description
                                     .services__count 532 проекта
-                                    button.button-services Консультация
+                                    button.button.button-services Консультация
                         .services__tabcontent#keyTab
                             .services__image
-                                img(src=('./assets/img/services1.jpg'))
+                                img(src=('./assets/img/services4.jpg'))
                             .services__bottom
                                 .services__titles
                                     .services__subtitle Ремонт под ключ
                                     p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
                                 .services__description
                                     .services__count 3211 проектов
-                                    button.button-services Консультация
+                                    button.button.button-services Консультация
                         .services__tabcontent#finishingTab
                             .services__image
-                                img(src=('./assets/img/services1.jpg'))
+                                img(src=('./assets/img/services5.jpg'))
                             .services__bottom
                                 .services__titles
                                     .services__subtitle Отделочные работы
                                     p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
                                 .services__description
                                     .services__count 554 проекта
-                                    button.button-services Консультация
+                                    button.button.button-services Консультация
                         .services__tabcontent#homeTab
                             .services__image
-                                img(src=('./assets/img/services1.jpg'))
+                                img(src=('./assets/img/services6.jpg'))
                             .services__bottom
                                 .services__titles
                                     .services__subtitle Выезд дизайнера на дом
                                     p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
                                 .services__description
                                     .services__count 532 проекта
-                                    button.button-services Консультация
+                                    button.button.button-services Консультация
         section.video#video
             .video__text
-                .video__play
-                    a(href='#').video__play-icon
+                a(href='#').video__play-icon
                 .video__title О  студии дизайна интерьеров BRUME за 2 минуты
         section.stages#stages
             .container
@@ -217,37 +213,62 @@ html(lang='en')
                         p.stage__text Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.
         section#customer.customer
             .customer__background
+                .customer-form
+                    h2.customer-form__title Мечтаете об интерьере от BRUME?
+                    .customer-form__subtitle Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.
+                    form.customer-form__form
+                        input(type='text' placeholder='Имя*' required).customer-form__input.customer-form__input_name
+                        input(type='tel' placeholder='Телефон*' required).customer-form__input.customer-form__input_tel
+                        input(type='email' placeholder='E-mail').customer-form__input.customer-form__input_mail
+                        button().button.button-customer Отправить
+                    p.customer-form__text Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных
             .customer__img
-            .container
-                .customer-form__block
-                    .customer-form
-                        h2.customer-form__title Мечтаете об интерьере от BRUME?
-                        .customer-form__subtitle Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.
-                        form.customer-form__form
-                            input(type='text' placeholder='Имя*' required).customer-form__input.customer-form__input_name
-                            input(type='tel' placeholder='Телефон*' required).customer-form__input.customer-form__input_tel
-                            input(type='email' placeholder='E-mail').customer-form__input.customer-form__input_mail
-                            button().button-customer Отправить
-                        p.customer-form__text Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных
         section.feedback-block#feedback
             .container
                 h2.feedback__title  Отзывы наших клиентов
-                ul.feedback
-                    li.feedback__item
-                        .feedback__name Александра Холодная
-                        .feedback__servece Услуга: инерьер детской
-                        p.feedback__text Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!
-                        .feedback__avatar
-                            img(src='./assets/img/avatar1.jpg')
-                ul.slider-buttons.slider-buttons_center
-                    li.slider-buttons__item.slider-buttons__item_active
-                        a(href='#').slider-buttons__link
-                    li.slider-buttons__item
-                        a(href='#').slider-buttons__link
-                    li.slider-buttons__item
-                        a(href='#').slider-buttons__link
-                    li.slider-buttons__item
-                        a(href='#').slider-buttons__link
+                .feedback
+                    .feedback__slide
+                        .feedback__item
+                            .feedback__name Александра Холодная
+                            .feedback__servece Услуга: инерьер детской
+                            p.feedback__text Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!
+                            .feedback__avatar
+                                img(src='./assets/img/avatar1.jpg')
+                    .feedback__slide
+                        .feedback__item
+                            .feedback__name Александра Холодная
+                            .feedback__servece Услуга: инерьер детской
+                            p.feedback__text Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!
+                            .feedback__avatar
+                                img(src='./assets/img/avatar1.jpg')
+                    .feedback__slide
+                        .feedback__item
+                            .feedback__name Александра Холодная
+                            .feedback__servece Услуга: инерьер детской
+                            p.feedback__text Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!
+                            .feedback__avatar
+                                img(src='./assets/img/avatar1.jpg')
+                    .feedback__slide
+                        .feedback__item
+                            .feedback__name Александра Холодная
+                            .feedback__servece Услуга: инерьер детской
+                            p.feedback__text Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!
+                            .feedback__avatar
+                                img(src='./assets/img/avatar1.jpg')
+                    .feedback__slide
+                        .feedback__item
+                            .feedback__name Александра Холодная
+                            .feedback__servece Услуга: инерьер детской
+                            p.feedback__text Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!
+                            .feedback__avatar
+                                img(src='./assets/img/avatar1.jpg')
+                    .feedback__slide
+                        .feedback__item
+                            .feedback__name Александра Холодная
+                            .feedback__servece Услуга: инерьер детской
+                            p.feedback__text Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!
+                            .feedback__avatar
+                                img(src='./assets/img/avatar1.jpg')
         footer.footer-block#footer
             .container
                 .footer

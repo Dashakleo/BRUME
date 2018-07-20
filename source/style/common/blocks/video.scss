@@ -1,6 +1,6 @@
 .video {
   background: url("../img/video.jpg") no-repeat center center/cover;
-  height: 600px;
+  height: 595px;
   position: relative;
   &:after {
     content: '';
@@ -16,9 +16,10 @@
 .video__text {
   @include centered();
   z-index: 10;
+  text-align: center;
 }
 
-.video__play {
+.video__play-icon  {
   margin: 0 auto;
   margin-bottom: 20px;
   background-color: #febc80;
@@ -26,12 +27,12 @@
   height: 85px;
   width: 85px;
   border-radius: 50%;
+  display: inline-block;
+  position: relative;
 
-  &-icon {
-    background: url("../img/play.png") no-repeat center center;
-    height: 85px;
-    width: 85px;
-    display: inline-block;
+  &:after {
+    content: url("../img/play.png");
+    @include centered()
   }
 }
 

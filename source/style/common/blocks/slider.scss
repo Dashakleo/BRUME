@@ -1,9 +1,12 @@
 .slider {
   position: relative;
   color: white;
+  height: 595px;
 }
 
 .slider__img {
+  margin-bottom: 28px;
+  height: 595px;
 }
 
 .slider__block {
@@ -32,30 +35,6 @@
   display: flex;
   padding-top: 37px;
   justify-content: space-between;
-}
-
-
-.slider-buttons {
-  width: 50%;
-  text-align: right;
-  height: 3px;
-  margin-top: -7px;
-  &_center {
-    margin: 0 auto;
-    width: 200px;
-  }
-}
-
-.slider-buttons__item {
-  background-color: #1a444a;
-  opacity: 0.21;
-  display: inline-block;
-  &:not(:last-child) {
-    margin-right: 9px;
-  }
-  &_active {
-    opacity: 1;
-  }
 }
 
 .slider-buttons__link {

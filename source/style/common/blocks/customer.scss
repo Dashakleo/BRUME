@@ -1,18 +1,16 @@
 .customer {
-  @extend %clearfix;
   height: 683px;
+  display: flex;
 }
 
 .customer__background {
   background-color: #182c3d;
   width: 50%;
   height: 100%;
-  float: left;
 }
 
 .customer__img {
   background: url('../img/feedback.jpg') no-repeat center right/cover;
-  float: right;
   height: 100%;
   width: 50%;
   overflow: hidden;
@@ -21,8 +19,7 @@
 //form
 
 .customer-form__block {
-  width: 50%;
-  position: absolute;
+
 }
 
 
@@ -30,7 +27,9 @@
   color: white;
   width: 475px;
   padding-top: 66px;
-  margin-left: 10px;
+  margin-left: auto;
+  margin-right: 100px;
+  margin-bottom: 85px;
 }
 
 .customer-form__title {

@@ -44,7 +44,6 @@ h4 {
 
 * {
   box-sizing: border-box;
-  transition: all 0.2s ease;
 }
 
 a {
@@ -56,5 +55,8 @@ a {
   width: 1170px;
   margin: 0 auto;
   position: relative;
+}
+body *:not(.slick-track):not(.slick-list){
+  transition: all 0.2s ease;
 }
 

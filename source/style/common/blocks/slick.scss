@@ -1,0 +1,24 @@
+.slick-dots {
+  margin-top: 30px;
+}
+
+.slick-dots li {
+  margin-right: 12px;
+  padding-top: -10px;
+  & button {
+    width: 26px;
+    &:before{
+      content: '';
+      background-color: #1a444a;
+      top: 7px;
+      height: 2px;
+      width: 26px;
+
+    }
+  }
+}
+
+.slider__img-block .slick-dots {
+  text-align: right;
+  display: inline-block;
+}
