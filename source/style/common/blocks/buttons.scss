@@ -9,7 +9,7 @@ button {
   cursor: pointer;
   &:hover {
     background-color: #f6a159;
-    border: none;
+    border-color: #f6a159;
   }
 }
 
@@ -17,11 +17,8 @@ button {
   height: 56px;
   padding: 0 29px;
   display: flex;
-  &__arrow {
-    background: url(../img/svg/arrow-right.svg) no-repeat center right;
-    width: 40px;
-    height: 10px;
-    margin-top: 3px;
+  &:after {
+    content: url(../img/arrow-right.png);
     margin-left: 22px;
   }
 }

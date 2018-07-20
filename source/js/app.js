@@ -146,14 +146,14 @@ portfolioFinishing.addEventListener('click', (e) => {
 
 
 //Наши услуги
-function serviceTab(event, tabName) {
+document.querySelector('#servicesTabs').onclick = function (e) {
     let i, tabcontent, tablinks;
-
+    let tabName = e.target.name;
+    if (!e.target.classList.contains('services__link')) return;
     tabcontent = document.querySelectorAll(".services__tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].hidden = true;
     }
-
     tablinks = document.querySelectorAll(".services__link");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove('services__link_active');
@@ -161,18 +161,22 @@ function serviceTab(event, tabName) {
     }
 
     document.querySelector(`#${tabName}`).hidden = false;
-    event.currentTarget.classList.add('services__link_active');
-    event.currentTarget.parentNode.classList.add('services__item_active');
-}
-
+    e.target.classList.add('services__link_active');
+    e.target.parentNode.classList.add('services__item_active');
+};
 document.querySelector('#defaultService').click();
 
 //menu
-function openMenu(x) {
+let menuIcon = document.querySelector('#top-bar__menu-icon');
+menuIcon.onclick = function (e) {
+    let target = e.target;
+    while (target !== menuIcon) {
+        target = target.parentNode;
+    }
+    target.classList.toggle("change");
     let menu = document.querySelector('#top-bar__menu');
-    x.classList.toggle("change");
-    menu.hidden ? menu.hidden = false : menu.hidden = true
-}
+    menu.hidden ? menu.hidden = false : menu.hidden = true;
+};
 
 let menuItem = document.querySelectorAll('.menu__item');
 for (let i = 0; i < menuItem.length; i++) {

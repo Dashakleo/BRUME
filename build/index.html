@@ -19,11 +19,11 @@
       <div class="hower"></div>
       <div class="container">
         <div class="top-bar">
-          <div class="top-bar__menu-icon menu-icon" id="top-bar__menu-icon" onclick="openMenu(this)">
+          <div class="top-bar__menu-icon menu-icon" id="top-bar__menu-icon">
             <div class="menu-icon__bar1"></div>
             <div class="menu-icon__bar2"></div>
             <div class="menu-icon__bar3"></div>
-          </div><img class="top-bar__logo" src="./assets/img/svg/logo.svg"><a class="top-bar__tel" href="tel: +7 (800) 823  48 88">+7 (800) 823  48 88</a>
+          </div><img class="top-bar__logo" src="./assets/img/logo.png"><a class="top-bar__tel" href="tel: +7 (800) 823  48 88">+7 (800) 823  48 88</a>
         </div>
         <div class="slider">
           <div class="top-bar__menu" id="top-bar__menu" hidden="true">
@@ -33,9 +33,7 @@
             <div class="slider__headers">
               <h1>Дизайн интерьеров</h1>
               <div class="slider__subtitle">Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом</div>
-              <button class="button-header">Заказать дизайн
-                <div class="button-header__arrow"></div>
-              </button>
+              <button class="button-header">Заказать дизайн</button>
             </div>
           </div>
         </div>
@@ -110,12 +108,12 @@
         <h2 class="services__title">Наши услуги</h2>
         <div class="services">
           <ul class="services__menu" id="servicesTabs">
-            <li class="services__item"><a class="services__link" onclick="serviceTab(event, 'roomsTab')">Дизайн жилого помещения</a></li>
-            <li class="services__item"><a class="services__link" onclick="serviceTab(event, 'roomTab')">Дизайн отельных комнат</a></li>
-            <li class="services__item services__item_active"><a class="services__link" onclick="serviceTab(event, 'commercialTab')" id="defaultService">Дизайн коммерческих объектов</a></li>
-            <li class="services__item"><a class="services__link" onclick="serviceTab(event, 'keyTab')">Ремонт под ключ</a></li>
-            <li class="services__item"><a class="services__link" onclick="serviceTab(event, 'finishingTab')">Отделочные работы</a></li>
-            <li class="services__item"><a class="services__link" onclick="serviceTab(event, 'homeTab')">Выезд дизайнера на дом</a></li>
+            <li class="services__item"><a class="services__link" name="roomsTab">Дизайн жилого помещения</a></li>
+            <li class="services__item"><a class="services__link" name="roomTab">Дизайн отельных комнат</a></li>
+            <li class="services__item services__item_active"><a class="services__link" name="commercialTab" id="defaultService">Дизайн коммерческих объектов</a></li>
+            <li class="services__item"><a class="services__link" name="keyTab">Ремонт под ключ</a></li>
+            <li class="services__item"><a class="services__link" name="finishingTab">Отделочные работы</a></li>
+            <li class="services__item"><a class="services__link" name="homeTab">Выезд дизайнера на дом</a></li>
           </ul>
           <div class="services__content">
             <div class="services__tabcontent" id="roomsTab">
@@ -266,7 +264,7 @@
             <form class="customer-form__form">
               <input class="customer-form__input customer-form__input_name" type="text" placeholder="Имя*" required>
               <input class="customer-form__input customer-form__input_tel" type="tel" placeholder="Телефон*" required>
-              <input class="customer-form__input customer-form__input_mail" type="email" placeholder="E-mail" required>
+              <input class="customer-form__input customer-form__input_mail" type="email" placeholder="E-mail">
               <button class="button-customer">Отправить</button>
             </form>
             <p class="customer-form__text">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
@@ -298,7 +296,7 @@
         <div class="footer">
           <div class="footer__copy">BRUME interior, 2017 ©</div>
           <div class="footer__center">
-            <div class="footer__logo"><img src="./assets/img/svg/logo-footer.svg"></div>
+            <div class="footer__logo"><img src="./assets/img/logo-footer.png"></div>
             <div class="footer__socials">
               <ul class="socials">
                 <li class="socials__item"><a class="socials__link socials__link_vk" href=""></a></li>

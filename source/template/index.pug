@@ -22,11 +22,11 @@ html(lang='en')
             .hower
             .container
                 .top-bar
-                    .top-bar__menu-icon.menu-icon#top-bar__menu-icon(onclick="openMenu(this)")
+                    .top-bar__menu-icon.menu-icon#top-bar__menu-icon
                         .menu-icon__bar1
                         .menu-icon__bar2
                         .menu-icon__bar3
-                    img(src='./assets/img/svg/logo.svg').top-bar__logo
+                    img(src='./assets/img/logo.png').top-bar__logo
                     a(href="tel: +7 (800) 823  48 88").top-bar__tel +7 (800) 823  48 88
                 .slider
                     .top-bar__menu#top-bar__menu(hidden='true')
@@ -36,14 +36,12 @@ html(lang='en')
                             a(href='#portfolio').menu__item Портфолио
                             a(href='#services').menu__item Наши услуги
                             a(href='#customer').menu__item Контакты
-
                     img(src="./assets/img/header.jpg").slider__img
                     .slider__block
                         .slider__headers
                             h1 Дизайн интерьеров
                             .slider__subtitle Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом
                             button.button-header Заказать дизайн
-                                .button-header__arrow
                 .slider__bottom
                     include ./common/socials
                     ul.slider-buttons
@@ -106,17 +104,17 @@ html(lang='en')
                 .services
                     ul.services__menu#servicesTabs
                         li.services__item
-                            a( onclick="serviceTab(event, 'roomsTab')").services__link Дизайн жилого помещения
+                            a(name ='roomsTab').services__link Дизайн жилого помещения
                         li.services__item
-                            a( onclick="serviceTab(event, 'roomTab')").services__link Дизайн отельных комнат
+                            a(name ='roomTab').services__link Дизайн отельных комнат
                         li.services__item.services__item_active
-                            a(onclick="serviceTab(event, 'commercialTab')").services__link#defaultService Дизайн коммерческих объектов
+                            a(name ='commercialTab').services__link#defaultService Дизайн коммерческих объектов
                         li.services__item
-                            a( onclick="serviceTab(event, 'keyTab')").services__link Ремонт под ключ
+                            a(name ='keyTab').services__link Ремонт под ключ
                         li.services__item
-                            a( onclick="serviceTab(event, 'finishingTab')").services__link Отделочные работы
+                            a(name ='finishingTab').services__link Отделочные работы
                         li.services__item
-                            a( onclick="serviceTab(event, 'homeTab')").services__link Выезд дизайнера на дом
+                            a(name ='homeTab').services__link Выезд дизайнера на дом
                     .services__content
                         .services__tabcontent#roomsTab
                             .services__image
@@ -228,7 +226,7 @@ html(lang='en')
                         form.customer-form__form
                             input(type='text' placeholder='Имя*' required).customer-form__input.customer-form__input_name
                             input(type='tel' placeholder='Телефон*' required).customer-form__input.customer-form__input_tel
-                            input(type='email' placeholder='E-mail' required).customer-form__input.customer-form__input_mail
+                            input(type='email' placeholder='E-mail').customer-form__input.customer-form__input_mail
                             button().button-customer Отправить
                         p.customer-form__text Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных
         section.feedback-block#feedback
@@ -256,7 +254,7 @@ html(lang='en')
                     .footer__copy BRUME interior, 2017 ©
                     .footer__center
                         .footer__logo
-                            img(src='./assets/img/svg/logo-footer.svg')
+                            img(src='./assets/img/logo-footer.png')
                         .footer__socials
                             include ./common/socials
                     .footer__design HolodnayaDesign

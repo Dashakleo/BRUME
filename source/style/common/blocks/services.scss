@@ -15,7 +15,7 @@
 .services__item {
   @include raleway(300);
   font-size: 18px;
-  max-width: 200px;
+  max-width: 210px;
   &:not(:last-child) {
     margin-bottom: 80px;
   }
