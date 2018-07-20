@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/app.css">
   </head>
   <body>
-    <header id="header">
+    <headerd id="header">
       <div class="hower"></div>
       <div class="container">
         <div class="top-bar">
@@ -23,8 +23,7 @@
             <div class="menu-icon__bar1"></div>
             <div class="menu-icon__bar2"></div>
             <div class="menu-icon__bar3"></div>
-          </div><img class="top-bar__logo" src="./assets/img/svg/logo.svg">
-          <div class="top-bar__tel">+7 (800) 823  48 88</div>
+          </div><img class="top-bar__logo" src="./assets/img/svg/logo.svg"><a class="top-bar__tel" href="tel: +7 (800) 823  48 88">+7 (800) 823  48 88</a>
         </div>
         <div class="slider">
           <div class="top-bar__menu" id="top-bar__menu" hidden="true">
@@ -47,68 +46,62 @@
             <li class="socials__item"><a class="socials__link socials__link_facebook" href=""></a></li>
           </ul>
           <ul class="slider-buttons">
-            <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
-            <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
-            <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
             <li class="slider-buttons__item slider-buttons__item_active"><a class="slider-buttons__link" href="#"></a></li>
+            <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
+            <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
+            <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
           </ul>
         </div>
       </div>
-    </header>
+    </headerd>
     <section id="advantages">
       <div class="container">
         <ul class="advantages">
           <li class="advantage">
-            <div class="advantage__count">01</div>
             <h4>Берем весь ремонт на себя</h4>
             <p>Заботы по дизайну и отделке помещения возьмем на себя, останется дождаться завершения работ и наслаждаться результатом</p>
           </li>
           <li class="advantage">
-            <div class="advantage__count">02</div>
             <h4>Мы - профессионалы своего дела</h4>
             <p>Наши дизайнеры постоянно повышают квалификацию, посещеют курсы и тренинги     а студия уже реализовала свыше 1000 дизайн-проектов</p>
           </li>
           <li class="advantage">
-            <div class="advantage__count">03</div>
             <h4>Наши проекты индивидуальны</h4>
             <p>Каждый, созданный студией, интерьер - индивидуальное         и максимально продуманное решение для каждого вида помещения</p>
           </li>
           <li class="advantage">
-            <div class="advantage__count">04</div>
             <h4>Работаем на выгодных условиях</h4>
             <p>Ценовая политика студии очень лояльна,  мы осуществляем контроль всего процесса работы  и получаем результат который делает клиентов счастивыми</p>
           </li>
         </ul>
       </div>
     </section>
-    <section id="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
-        <div class="portfolio">
-          <h2>Портфолио</h2>
-          <ul class="portfolio-tabs">
-            <li class="portfolio-tabs__item" id="portfolioAll"><a class="portfolio-tabs__link portfolio-tabs__link_active" href="#">Все проекты</a></li>
-            <li class="portfolio-tabs__item" id="portfolioInterior"><a class="portfolio-tabs__link" href="#">Дизайн интерьеров</a></li>
-            <li class="portfolio-tabs__item" id="portfolioFinishing"><a class="portfolio-tabs__link" href="#">Отделочные работы</a></li>
-          </ul>
-          <div class="glide">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides portfolio-slider">
-                <!--li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio1.jpg)')-->
-                <!--    .portfolio-slider__title Дизайн интерьера гостинной-->
-                <!--    .portfolio-slider__type Дизайн интерьера-->
-                <!--li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio2.jpg)')-->
-                <!--    .portfolio-slider__title Дизайн интерьера гостинной-->
-                <!--    .portfolio-slider__type Отделочная работа-->
-                <!--li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio3.jpg)')-->
-                <!--    .portfolio-slider__title Дизайн столовой в стиле «Бохо»-->
-                <!--    .portfolio-slider__type Дизайн интерьера-->
-                <!--li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio4.jpg)')-->
-                <!--    .portfolio-slider__title Лофт интерьер для отеля Hiloft-->
-                <!--    .portfolio-slider__type Дизайн интерьера-->
-              </ul>
-            </div>
-            <div class="glide__arrows" data-glide-el="controls"><a class="glide__arrow glide__arrow--left arrow--left" data-glide-dir="&lt;"></a><a class="glide__arrow glide__arrow--right arrow--right" data-glide-dir="&gt;"></a></div>
+        <h2>Портфолио</h2>
+        <ul class="portfolio-tabs">
+          <li class="portfolio-tabs__item" id="portfolioAll"><a class="portfolio-tabs__link portfolio-tabs__link_active" href="#">Все проекты</a></li>
+          <li class="portfolio-tabs__item" id="portfolioInterior"><a class="portfolio-tabs__link" href="#">Дизайн интерьеров</a></li>
+          <li class="portfolio-tabs__item" id="portfolioFinishing"><a class="portfolio-tabs__link" href="#">Отделочные работы</a></li>
+        </ul>
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides portfolio-slider">
+              <!--li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio1.jpg)')-->
+              <!--    .portfolio-slider__title Дизайн интерьера гостинной-->
+              <!--    .portfolio-slider__type Дизайн интерьера-->
+              <!--li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio2.jpg)')-->
+              <!--    .portfolio-slider__title Дизайн интерьера гостинной-->
+              <!--    .portfolio-slider__type Отделочная работа-->
+              <!--li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio3.jpg)')-->
+              <!--    .portfolio-slider__title Дизайн столовой в стиле «Бохо»-->
+              <!--    .portfolio-slider__type Дизайн интерьера-->
+              <!--li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio4.jpg)')-->
+              <!--    .portfolio-slider__title Лофт интерьер для отеля Hiloft-->
+              <!--    .portfolio-slider__type Дизайн интерьера-->
+            </ul>
           </div>
+          <div class="glide__arrows" data-glide-el="controls"><a class="glide__arrow glide__arrow--left arrow--left" data-glide-dir="&lt;"></a><a class="glide__arrow glide__arrow--right arrow--right" data-glide-dir="&gt;"></a></div>
         </div>
       </div>
     </section>
@@ -127,192 +120,194 @@
           <div class="services__content">
             <div class="services__tabcontent" id="roomsTab">
               <div class="services__image"><img src="./assets/img/services1.jpg"></div>
-              <div class="services__titles">
-                <div class="services__subtitle">Дизайн жилого помещения</div>
-                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
-              </div>
-              <div class="services__description">
-                <div class="services__count">12 проектов</div>
-                <button class="button-services">Консультация</button>
+              <div class="services__bottom">
+                <div class="services__titles">
+                  <div class="services__subtitle">Дизайн жилого помещения</div>
+                  <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+                </div>
+                <div class="services__description">
+                  <div class="services__count">12 проектов</div>
+                  <button class="button-services">Консультация</button>
+                </div>
               </div>
             </div>
             <div class="services__tabcontent" id="roomTab">
               <div class="services__image"><img src="./assets/img/services1.jpg"></div>
-              <div class="services__titles">
-                <div class="services__subtitle">Дизайн отельных комнат</div>
-                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
-              </div>
-              <div class="services__description">
-                <div class="services__count">442 проекта</div>
-                <button class="button-services">Консультация</button>
+              <div class="services__bottom">
+                <div class="services__titles">
+                  <div class="services__subtitle">Дизайн отельных комнат</div>
+                  <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+                </div>
+                <div class="services__description">
+                  <div class="services__count">442 проекта</div>
+                  <button class="button-services">Консультация</button>
+                </div>
               </div>
             </div>
             <div class="services__tabcontent" id="commercialTab">
               <div class="services__image"><img src="./assets/img/services1.jpg"></div>
-              <div class="services__titles">
-                <div class="services__subtitle">Дизайн коммерческих объектов</div>
-                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
-              </div>
-              <div class="services__description">
-                <div class="services__count">532 проекта</div>
-                <button class="button-services">Консультация</button>
+              <div class="services__bottom">
+                <div class="services__titles">
+                  <div class="services__subtitle">Дизайн коммерческих объектов</div>
+                  <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+                </div>
+                <div class="services__description">
+                  <div class="services__count">532 проекта</div>
+                  <button class="button-services">Консультация</button>
+                </div>
               </div>
             </div>
             <div class="services__tabcontent" id="keyTab">
               <div class="services__image"><img src="./assets/img/services1.jpg"></div>
-              <div class="services__titles">
-                <div class="services__subtitle">Ремонт под ключ</div>
-                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
-              </div>
-              <div class="services__description">
-                <div class="services__count">3211 проектов</div>
-                <button class="button-services">Консультация</button>
+              <div class="services__bottom">
+                <div class="services__titles">
+                  <div class="services__subtitle">Ремонт под ключ</div>
+                  <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+                </div>
+                <div class="services__description">
+                  <div class="services__count">3211 проектов</div>
+                  <button class="button-services">Консультация</button>
+                </div>
               </div>
             </div>
             <div class="services__tabcontent" id="finishingTab">
               <div class="services__image"><img src="./assets/img/services1.jpg"></div>
-              <div class="services__titles">
-                <div class="services__subtitle">Отделочные работы</div>
-                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
-              </div>
-              <div class="services__description">
-                <div class="services__count">554 проекта</div>
-                <button class="button-services">Консультация</button>
+              <div class="services__bottom">
+                <div class="services__titles">
+                  <div class="services__subtitle">Отделочные работы</div>
+                  <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+                </div>
+                <div class="services__description">
+                  <div class="services__count">554 проекта</div>
+                  <button class="button-services">Консультация</button>
+                </div>
               </div>
             </div>
             <div class="services__tabcontent" id="homeTab">
               <div class="services__image"><img src="./assets/img/services1.jpg"></div>
-              <div class="services__titles">
-                <div class="services__subtitle">Выезд дизайнера на дом</div>
-                <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
-              </div>
-              <div class="services__description">
-                <div class="services__count">532 проекта</div>
-                <button class="button-services">Консультация</button>
+              <div class="services__bottom">
+                <div class="services__titles">
+                  <div class="services__subtitle">Выезд дизайнера на дом</div>
+                  <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+                </div>
+                <div class="services__description">
+                  <div class="services__count">532 проекта</div>
+                  <button class="button-services">Консультация</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section>
-      <div class="video">
-        <div class="video__text">
-          <div class="video__play"><a class="video__play-icon" href="#"></a></div>
-          <div class="video__title">О  студии дизайна интерьеров BRUME за 2 минуты</div>
-        </div>
+    <section class="video" id="video">
+      <div class="video__text">
+        <div class="video__play"><a class="video__play-icon" href="#"></a></div>
+        <div class="video__title">О  студии дизайна интерьеров BRUME за 2 минуты</div>
       </div>
     </section>
-    <section>
+    <section class="stages" id="stages">
       <div class="container">
-        <div class="stages">
-          <h2 class="stages__title">Этапы работы</h2>
-          <ul class="stages__list">
-            <li class="stage">
-              <div class="stage__rounds">
-                <div class="stage__number">1</div>
-              </div>
-              <h4 class="stage__title">Консультация</h4>
-              <p class="stage__text">Обсуждаем задачи и пожелания, предлагаем варианты дизайна интерьера, оговариваем сроки.</p>
-            </li>
-            <li class="stage">
-              <div class="stage__rounds">
-                <div class="stage__number">2</div>
-              </div>
-              <h4 class="stage__title">Техническое задание</h4>
-              <p class="stage__text">Составляем техническое задание. Заключаем договор, в котором прописываем все этапы проекта.</p>
-            </li>
-            <li class="stage">
-              <div class="stage__rounds">
-                <div class="stage__number">3</div>
-              </div>
-              <h4 class="stage__title">Замеры и планировка</h4>
-              <p class="stage__text">Фиксируем размеры стен, окон, плинтусов, дверных проемов  для эффективной работы</p>
-            </li>
-            <li class="stage">
-              <div class="stage__rounds">
-                <div class="stage__number">4</div>
-              </div>
-              <h4 class="stage__title">Дизайн-концепция</h4>
-              <p class="stage__text">Создаем концепцию на основе пожеланий клиента, его образов        и ощущений.  подбираем мебель.</p>
-            </li>
-            <li class="stage">
-              <div class="stage__rounds">
-                <div class="stage__number">5</div>
-              </div>
-              <h4 class="stage__title">3D Визуализация</h4>
-              <p class="stage__text">Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительным нормам..</p>
-            </li>
-            <li class="stage">
-              <div class="stage__rounds">
-                <div class="stage__number">6</div>
-              </div>
-              <h4 class="stage__title">Комплектация интерьера</h4>
-              <p class="stage__text">Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.</p>
-            </li>
-          </ul>
-        </div>
+        <h2 class="stages__title">Этапы работы</h2>
+        <ul class="stages__list">
+          <li class="stage">
+            <div class="stage__rounds">
+              <div class="stage__number">1</div>
+            </div>
+            <div class="stage__title">Консультация</div>
+            <p class="stage__text">Обсуждаем задачи и пожелания, предлагаем варианты дизайна интерьера, оговариваем сроки.</p>
+          </li>
+          <li class="stage">
+            <div class="stage__rounds">
+              <div class="stage__number">2</div>
+            </div>
+            <div class="stage__title">Техническое задание</div>
+            <p class="stage__text">Составляем техническое задание. Заключаем договор, в котором прописываем все этапы проекта.</p>
+          </li>
+          <li class="stage">
+            <div class="stage__rounds">
+              <div class="stage__number">3</div>
+            </div>
+            <div class="stage__title">Замеры и планировка</div>
+            <p class="stage__text">Фиксируем размеры стен, окон, плинтусов, дверных проемов  для эффективной работы</p>
+          </li>
+          <li class="stage">
+            <div class="stage__rounds">
+              <div class="stage__number">4</div>
+            </div>
+            <div class="stage__title">Дизайн-концепция</div>
+            <p class="stage__text">Создаем концепцию на основе пожеланий клиента, его образов        и ощущений.  подбираем мебель.</p>
+          </li>
+          <li class="stage">
+            <div class="stage__rounds">
+              <div class="stage__number">5</div>
+            </div>
+            <div class="stage__title">3D Визуализация</div>
+            <p class="stage__text">Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительным нормам..</p>
+          </li>
+          <li class="stage">
+            <div class="stage__rounds">
+              <div class="stage__number">6</div>
+            </div>
+            <div class="stage__title">Комплектация интерьера</div>
+            <p class="stage__text">Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.</p>
+          </li>
+        </ul>
       </div>
     </section>
-    <section id="customer">
-      <div class="customer">
-        <div class="customer__background"></div>
-        <div class="customer__img"></div>
-        <div class="container">
-          <div class="customer-form__block">
-            <div class="customer-form">
-              <h2 class="customer-form__title">Мечтаете об интерьере от BRUME?</h2>
-              <div class="customer-form__subtitle">Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.</div>
-              <form class="customer-form__form">
-                <input class="customer-form__input" type="text" placeholder="Имя*" style="background-image: url(&quot;./assets/img/svg/name.svg&quot;)">
-                <input class="customer-form__input" type="tel" placeholder="Телефон*" style="background-image: url(&quot;./assets/img/svg/tel.svg&quot;)">
-                <input class="customer-form__input" type="email" placeholder="E-mail" style="background-image: url(&quot;./assets/img/svg/mail.svg&quot;)">
-                <button class="button-customer">Отправить</button>
-              </form>
-              <p class="customer-form__text">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
-            </div>
+    <section class="customer" id="customer">
+      <div class="customer__background"></div>
+      <div class="customer__img"></div>
+      <div class="container">
+        <div class="customer-form__block">
+          <div class="customer-form">
+            <h2 class="customer-form__title">Мечтаете об интерьере от BRUME?</h2>
+            <div class="customer-form__subtitle">Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.</div>
+            <form class="customer-form__form">
+              <input class="customer-form__input customer-form__input_name" type="text" placeholder="Имя*" required>
+              <input class="customer-form__input customer-form__input_tel" type="tel" placeholder="Телефон*" required>
+              <input class="customer-form__input customer-form__input_mail" type="email" placeholder="E-mail" required>
+              <button class="button-customer">Отправить</button>
+            </form>
+            <p class="customer-form__text">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
           </div>
         </div>
       </div>
     </section>
-    <section>
-      <div class="feedback-block">
-        <div class="container">
-          <h2 class="feedback__title"> Отзывы наших клиентов</h2>
-          <ul class="feedback">
-            <li class="feedback__item">
-              <div class="feedback__name">Александра Холодная</div>
-              <div class="feedback__servece">Услуга: инерьер детской</div>
-              <p class="feedback__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!</p>
-              <div class="feedback__avatar"><img src="./assets/img/avatar1.jpg"></div>
-            </li>
-          </ul>
-          <ul class="slider-buttons slider-buttons_center">
-            <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
-            <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
-            <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
-            <li class="slider-buttons__item slider-buttons__item_active"><a class="slider-buttons__link" href="#"></a></li>
-          </ul>
-        </div>
+    <section class="feedback-block" id="feedback">
+      <div class="container">
+        <h2 class="feedback__title"> Отзывы наших клиентов</h2>
+        <ul class="feedback">
+          <li class="feedback__item">
+            <div class="feedback__name">Александра Холодная</div>
+            <div class="feedback__servece">Услуга: инерьер детской</div>
+            <p class="feedback__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!</p>
+            <div class="feedback__avatar"><img src="./assets/img/avatar1.jpg"></div>
+          </li>
+        </ul>
+        <ul class="slider-buttons slider-buttons_center">
+          <li class="slider-buttons__item slider-buttons__item_active"><a class="slider-buttons__link" href="#"></a></li>
+          <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
+          <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
+          <li class="slider-buttons__item"><a class="slider-buttons__link" href="#"></a></li>
+        </ul>
       </div>
     </section>
-    <footer>
-      <div class="footer-block">
-        <div class="container">
-          <div class="footer">
-            <div class="footer__copy">BRUME interior, 2017</div>
-            <div class="footer__center">
-              <div class="footer__logo"><img src="./assets/img/svg/logo-footer.svg"></div>
-              <div class="footer__socials">
-                <ul class="socials">
-                  <li class="socials__item"><a class="socials__link socials__link_vk" href=""></a></li>
-                  <li class="socials__item"><a class="socials__link socials__link_instagram" href=""></a></li>
-                  <li class="socials__item"><a class="socials__link socials__link_facebook" href=""></a></li>
-                </ul>
-              </div>
+    <footer class="footer-block" id="footer">
+      <div class="container">
+        <div class="footer">
+          <div class="footer__copy">BRUME interior, 2017 ©</div>
+          <div class="footer__center">
+            <div class="footer__logo"><img src="./assets/img/svg/logo-footer.svg"></div>
+            <div class="footer__socials">
+              <ul class="socials">
+                <li class="socials__item"><a class="socials__link socials__link_vk" href=""></a></li>
+                <li class="socials__item"><a class="socials__link socials__link_instagram" href=""></a></li>
+                <li class="socials__item"><a class="socials__link socials__link_facebook" href=""></a></li>
+              </ul>
             </div>
-            <div class="footer__design">HolodnayaDesign</div>
           </div>
+          <div class="footer__design">HolodnayaDesign</div>
         </div>
       </div>
     </footer>

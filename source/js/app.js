@@ -1,3 +1,4 @@
+'use strict';
 let slidesPortfolio = [{
     type: 'Дизайн интерьера',
     title: 'Дизайн интерьера гостинной',
@@ -14,7 +15,7 @@ let slidesPortfolio = [{
     type: 'Дизайн интерьера',
     title: 'Лофт интерьер для отеля Hiloft',
     img: 'url(./assets/img/portfolio4.jpg)'
-},{
+}, {
     type: 'Дизайн интерьера',
     title: 'Дизайн интерьера гостинной',
     img: 'url(./assets/img/portfolio1.jpg)'
@@ -79,6 +80,7 @@ const slidesRender = async (slidesPortfolio, count = 4) => {
 
     //Прячет тип и тайтл при наведении
     document.querySelector('.portfolio-slider').onmouseover = document.querySelector('.portfolio-slider').onmouseout = handler;
+
     function handler(event) {
         let otherSlides = document.querySelectorAll('.glide__slide.portfolio-slider__item');
         otherSlides = Array.prototype.slice.call(otherSlides);
@@ -100,9 +102,9 @@ slidesRender(slidesPortfolio);
 
 
 //Сортировка
- const portfolioAll = document.querySelector('#portfolioAll');
- const portfolioInterior = document.querySelector('#portfolioInterior');
- const portfolioFinishing = document.querySelector('#portfolioFinishing');
+const portfolioAll = document.querySelector('#portfolioAll');
+const portfolioInterior = document.querySelector('#portfolioInterior');
+const portfolioFinishing = document.querySelector('#portfolioFinishing');
 portfolioAll.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector(".portfolio-tabs__link_active").classList.remove('portfolio-tabs__link_active');
@@ -110,21 +112,21 @@ portfolioAll.addEventListener('click', (e) => {
     slidesRender(slidesPortfol);
 });
 
- portfolioInterior.addEventListener('click', (e) => {
-     e.preventDefault();
-     let count = 0;
-     let sortedSlides = [];
-     document.querySelector(".portfolio-tabs__link_active").classList.remove('portfolio-tabs__link_active');
-     e.target.classList.add('portfolio-tabs__link_active');
-     slidesPortfol.forEach((slide) => {
-         if (slide.type === 'Дизайн интерьера') {
-             sortedSlides.push(slide);
-             count +=1;
-         }
-     });
-     if (count > 4) count = 4;
-     slidesRender(sortedSlides,count);
- });
+portfolioInterior.addEventListener('click', (e) => {
+    e.preventDefault();
+    let count = 0;
+    let sortedSlides = [];
+    document.querySelector(".portfolio-tabs__link_active").classList.remove('portfolio-tabs__link_active');
+    e.target.classList.add('portfolio-tabs__link_active');
+    slidesPortfol.forEach((slide) => {
+        if (slide.type === 'Дизайн интерьера') {
+            sortedSlides.push(slide);
+            count += 1;
+        }
+    });
+    if (count > 4) count = 4;
+    slidesRender(sortedSlides, count);
+});
 
 portfolioFinishing.addEventListener('click', (e) => {
     e.preventDefault();
@@ -135,11 +137,11 @@ portfolioFinishing.addEventListener('click', (e) => {
     slidesPortfol.forEach((slide) => {
         if (slide.type === 'Отделочная работа') {
             sortedSlides.push(slide);
-            count +=1;
+            count += 1;
         }
     });
     if (count > 4) count = 4;
-    slidesRender(sortedSlides,count);
+    slidesRender(sortedSlides, count);
 });
 
 
@@ -162,6 +164,7 @@ function serviceTab(event, tabName) {
     event.currentTarget.classList.add('services__link_active');
     event.currentTarget.parentNode.classList.add('services__item_active');
 }
+
 document.querySelector('#defaultService').click();
 
 //menu

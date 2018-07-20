@@ -1,6 +1,6 @@
 .feedback-block {
-  padding-top: 130px;
-  margin-bottom: 160px;
+  padding-top: 145px;
+  margin-bottom: 170px;
 }
 
 .feedback__title {
@@ -10,15 +10,15 @@
 .feedback {
   width: 792px;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 62px;
 }
 
 .feedback__item {
   width: 652px;
   height: 273px;
   background-color: white;
-  padding-top: 54px;
-  padding-left: 71px;
+  padding-top: 44px;
+  padding-left: 72px;
   position: relative;
   margin-right: 100px;
 }
@@ -27,13 +27,13 @@
   @include raleway(600);
   font-size: 22px;
   color: #313131;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .feedback__servece {
   @include raleway(700);
   color: #efb172;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .feedback__text {
@@ -46,5 +46,6 @@
   height: 192px;
   overflow: hidden;
   @include centered(y);
-  right: -140px;
+  right: -144px;
+  margin-top: -10px;
 }

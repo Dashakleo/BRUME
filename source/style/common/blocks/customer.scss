@@ -29,7 +29,8 @@
 .customer-form {
   color: white;
   width: 475px;
-  padding-top: 80px;
+  padding-top: 66px;
+  margin-left: 10px;
 }
 
 .customer-form__title {
@@ -58,6 +59,16 @@
   background: no-repeat center right;
   opacity: 0.6;
   margin-bottom: 25px;
+  &_name {
+    background-image: url("../img/svg/name.svg")
+  }
+  &_tel {
+    background-image: url("../img/svg/tel.svg")
+  }
+  &_mail {
+    background-image: url("../img/svg/mail.svg")
+  }
+
   &:focus {
     opacity: 1;
   }

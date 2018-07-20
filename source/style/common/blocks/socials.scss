@@ -1,16 +1,14 @@
 .socials {
   position: relative;
   z-index: 20;
-  margin-top: 42px;
-  width: 50%;
-  display: flex;
 }
 
 .socials__item {
   margin-left: 6px;
   opacity: 0.67;
+  display: inline-block;
   &:not(:last-child) {
-    margin-right: 37px;
+    margin-right: 28px;
   }
   &:hover {
     opacity: 1;

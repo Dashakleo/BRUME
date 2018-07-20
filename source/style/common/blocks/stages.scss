@@ -1,20 +1,21 @@
 .stages {
- margin-top: 140px;
+ margin-top: 120px;
   margin-bottom: 105px;
 }
 
 .stages__title {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .stages__list {
   display: flex;
   flex-flow: wrap;
+  justify-content: space-between;
 }
 
 .stage {
   width: 360px;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 
 .stage__rounds {
@@ -62,6 +63,9 @@
   margin-left: 83px;
   margin-top: 25px;
   color: #313131;
+  font-size: 22px;
+  @include raleway(600);
+  color: #1a292f;
   &:after {
     content: '';
     display: block;
@@ -76,4 +80,5 @@
 .stage__text{
   margin-left: 83px;
   width: 277px;
+  line-height: 25px;
 }

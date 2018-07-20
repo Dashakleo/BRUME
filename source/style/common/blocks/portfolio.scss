@@ -1,16 +1,16 @@
 .portfolio {
-  margin-bottom: 130px;
+  margin-bottom: 125px;
 }
 
 .portfolio-tabs {
-  margin-top: 60px;
-  @extend %clearfix;
-  margin-bottom: 41px;
+  margin-top: 56px;
+  margin-bottom: 45px;
+  display: flex;
+  font-size: 18px;
 }
 
 .portfolio-tabs__item {
-  float: left;
-  margin-right: 60px;
+  margin-right: 55px;
   @include raleway(300);
 
 }
@@ -26,7 +26,7 @@
       display: block;
       background-color: #1a292f;
       width: 100%;
-      height: 1px;
+      height: 2px;
       margin-top: 10px;
     }
   }
@@ -40,7 +40,6 @@
 
 .portfolio-slider__item {
   transition: all 0.5s ease;
-  float: left;
   flex: 1;
   height: 100%;
   background: no-repeat center left/cover;
@@ -78,6 +77,7 @@
   height: 50px;
   width: 45px;
   box-shadow: none;
+  margin-top: -20px;
   background: url("../img/arrow2.png") no-repeat center center;
 }
 .arrow--right {
@@ -85,6 +85,7 @@
   border: none;
   width: 45px;
   height: 50px;
+  margin-top: -20px;
   box-shadow: none;
 }
 

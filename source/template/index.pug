@@ -18,17 +18,16 @@ html(lang='en')
 
 
     body
-        header#header
+        headerd#header
             .hower
             .container
                 .top-bar
                     .top-bar__menu-icon.menu-icon#top-bar__menu-icon(onclick="openMenu(this)")
-                       .menu-icon__bar1
-                       .menu-icon__bar2
-                       .menu-icon__bar3
+                        .menu-icon__bar1
+                        .menu-icon__bar2
+                        .menu-icon__bar3
                     img(src='./assets/img/svg/logo.svg').top-bar__logo
-                    .top-bar__tel
-                        | +7 (800) 823  48 88
+                    a(href="tel: +7 (800) 823  48 88").top-bar__tel +7 (800) 823  48 88
                 .slider
                     .top-bar__menu#top-bar__menu(hidden='true')
                         .menu__content
@@ -48,63 +47,58 @@ html(lang='en')
                 .slider__bottom
                     include ./common/socials
                     ul.slider-buttons
-                        li.slider-buttons__item
-                            a(href='#').slider-buttons__link
-                        li.slider-buttons__item
-                            a(href='#').slider-buttons__link
-                        li.slider-buttons__item
-                            a(href='#').slider-buttons__link
                         li.slider-buttons__item.slider-buttons__item_active
+                            a(href='#').slider-buttons__link
+                        li.slider-buttons__item
+                            a(href='#').slider-buttons__link
+                        li.slider-buttons__item
+                            a(href='#').slider-buttons__link
+                        li.slider-buttons__item
                             a(href='#').slider-buttons__link
         section#advantages
             .container
                 ul.advantages
                     li.advantage
-                        .advantage__count 01
                         h4 Берем весь ремонт на себя
                         p Заботы по дизайну и отделке помещения возьмем на себя, останется дождаться завершения работ и наслаждаться результатом
                     li.advantage
-                        .advantage__count 02
                         h4 Мы - профессионалы своего дела
                         p Наши дизайнеры постоянно повышают квалификацию, посещеют курсы и тренинги     а студия уже реализовала свыше 1000 дизайн-проектов
                     li.advantage
-                        .advantage__count 03
                         h4 Наши проекты индивидуальны
                         p Каждый, созданный студией, интерьер - индивидуальное         и максимально продуманное решение для каждого вида помещения
                     li.advantage
-                        .advantage__count 04
                         h4 Работаем на выгодных условиях
                         p Ценовая политика студии очень лояльна,  мы осуществляем контроль всего процесса работы  и получаем результат который делает клиентов счастивыми
 
-        section#portfolio
+        section.portfolio#portfolio
             .container
-                .portfolio
-                    h2 Портфолио
-                    ul.portfolio-tabs
-                        li.portfolio-tabs__item#portfolioAll
-                            a(href='#').portfolio-tabs__link.portfolio-tabs__link_active Все проекты
-                        li.portfolio-tabs__item#portfolioInterior
-                            a(href='#').portfolio-tabs__link Дизайн интерьеров
-                        li.portfolio-tabs__item#portfolioFinishing
-                            a(href='#').portfolio-tabs__link Отделочные работы
-                    .glide
-                        .glide__track(data-glide-el="track")
-                            ul.glide__slides.portfolio-slider
-                                //li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio1.jpg)')
-                                //    .portfolio-slider__title Дизайн интерьера гостинной
-                                //    .portfolio-slider__type Дизайн интерьера
-                                //li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio2.jpg)')
-                                //    .portfolio-slider__title Дизайн интерьера гостинной
-                                //    .portfolio-slider__type Отделочная работа
-                                //li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio3.jpg)')
-                                //    .portfolio-slider__title Дизайн столовой в стиле «Бохо»
-                                //    .portfolio-slider__type Дизайн интерьера
-                                //li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio4.jpg)')
-                                //    .portfolio-slider__title Лофт интерьер для отеля Hiloft
-                                //    .portfolio-slider__type Дизайн интерьера
-                        .glide__arrows(data-glide-el="controls")
-                            a.glide__arrow.glide__arrow--left.arrow--left(data-glide-dir="<")
-                            a.glide__arrow.glide__arrow--right.arrow--right(data-glide-dir=">")
+                h2 Портфолио
+                ul.portfolio-tabs
+                    li.portfolio-tabs__item#portfolioAll
+                        a(href='#').portfolio-tabs__link.portfolio-tabs__link_active Все проекты
+                    li.portfolio-tabs__item#portfolioInterior
+                        a(href='#').portfolio-tabs__link Дизайн интерьеров
+                    li.portfolio-tabs__item#portfolioFinishing
+                        a(href='#').portfolio-tabs__link Отделочные работы
+                .glide
+                    .glide__track(data-glide-el="track")
+                        ul.glide__slides.portfolio-slider
+                            //li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio1.jpg)')
+                            //    .portfolio-slider__title Дизайн интерьера гостинной
+                            //    .portfolio-slider__type Дизайн интерьера
+                            //li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio2.jpg)')
+                            //    .portfolio-slider__title Дизайн интерьера гостинной
+                            //    .portfolio-slider__type Отделочная работа
+                            //li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio3.jpg)')
+                            //    .portfolio-slider__title Дизайн столовой в стиле «Бохо»
+                            //    .portfolio-slider__type Дизайн интерьера
+                            //li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio4.jpg)')
+                            //    .portfolio-slider__title Лофт интерьер для отеля Hiloft
+                            //    .portfolio-slider__type Дизайн интерьера
+                    .glide__arrows(data-glide-el="controls")
+                        a.glide__arrow.glide__arrow--left.arrow--left(data-glide-dir="<")
+                        a.glide__arrow.glide__arrow--right.arrow--right(data-glide-dir=">")
 
         section#services
             .container
@@ -127,144 +121,145 @@ html(lang='en')
                         .services__tabcontent#roomsTab
                             .services__image
                                 img(src=('./assets/img/services1.jpg'))
-                            .services__titles
-                                .services__subtitle Дизайн жилого помещения
-                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
-                            .services__description
-                                .services__count 12 проектов
-                                button.button-services Консультация
+                            .services__bottom
+                                .services__titles
+                                    .services__subtitle Дизайн жилого помещения
+                                    p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                                .services__description
+                                    .services__count 12 проектов
+                                    button.button-services Консультация
                         .services__tabcontent#roomTab
                             .services__image
                                 img(src=('./assets/img/services1.jpg'))
-                            .services__titles
-                                .services__subtitle Дизайн отельных комнат
-                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
-                            .services__description
-                                .services__count 442 проекта
-                                button.button-services Консультация
+                            .services__bottom
+                                .services__titles
+                                    .services__subtitle Дизайн отельных комнат
+                                    p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                                .services__description
+                                    .services__count 442 проекта
+                                    button.button-services Консультация
                         .services__tabcontent#commercialTab
                             .services__image
                                 img(src=('./assets/img/services1.jpg'))
-                            .services__titles
-                                .services__subtitle Дизайн коммерческих объектов
-                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
-                            .services__description
-                                .services__count 532 проекта
-                                button.button-services Консультация
+                            .services__bottom
+                                .services__titles
+                                    .services__subtitle Дизайн коммерческих объектов
+                                    p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                                .services__description
+                                    .services__count 532 проекта
+                                    button.button-services Консультация
                         .services__tabcontent#keyTab
                             .services__image
                                 img(src=('./assets/img/services1.jpg'))
-                            .services__titles
-                                .services__subtitle Ремонт под ключ
-                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
-                            .services__description
-                                .services__count 3211 проектов
-                                button.button-services Консультация
+                            .services__bottom
+                                .services__titles
+                                    .services__subtitle Ремонт под ключ
+                                    p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                                .services__description
+                                    .services__count 3211 проектов
+                                    button.button-services Консультация
                         .services__tabcontent#finishingTab
                             .services__image
                                 img(src=('./assets/img/services1.jpg'))
-                            .services__titles
-                                .services__subtitle Отделочные работы
-                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
-                            .services__description
-                                .services__count 554 проекта
-                                button.button-services Консультация
+                            .services__bottom
+                                .services__titles
+                                    .services__subtitle Отделочные работы
+                                    p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                                .services__description
+                                    .services__count 554 проекта
+                                    button.button-services Консультация
                         .services__tabcontent#homeTab
                             .services__image
                                 img(src=('./assets/img/services1.jpg'))
-                            .services__titles
-                                .services__subtitle Выезд дизайнера на дом
-                                p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
-                            .services__description
-                                .services__count 532 проекта
-                                button.button-services Консультация
-        section
-            .video
-                .video__text
-                    .video__play
-                        a(href='#').video__play-icon
-                    .video__title О  студии дизайна интерьеров BRUME за 2 минуты
-        section
+                            .services__bottom
+                                .services__titles
+                                    .services__subtitle Выезд дизайнера на дом
+                                    p.services__text Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                                .services__description
+                                    .services__count 532 проекта
+                                    button.button-services Консультация
+        section.video#video
+            .video__text
+                .video__play
+                    a(href='#').video__play-icon
+                .video__title О  студии дизайна интерьеров BRUME за 2 минуты
+        section.stages#stages
             .container
-                .stages
-                    h2.stages__title Этапы работы
-                    ul.stages__list
-                        li.stage
-                            .stage__rounds
-                                .stage__number 1
-                            h4.stage__title Консультация
-                            p.stage__text Обсуждаем задачи и пожелания, предлагаем варианты дизайна интерьера, оговариваем сроки.
-                        li.stage
-                            .stage__rounds
-                                .stage__number 2
-                            h4.stage__title Техническое задание
-                            p.stage__text Составляем техническое задание. Заключаем договор, в котором прописываем все этапы проекта.
-                        li.stage
-                            .stage__rounds
-                                .stage__number 3
-                            h4.stage__title Замеры и планировка
-                            p.stage__text Фиксируем размеры стен, окон, плинтусов, дверных проемов  для эффективной работы
-                        li.stage
-                            .stage__rounds
-                                .stage__number 4
-                            h4.stage__title Дизайн-концепция
-                            p.stage__text Создаем концепцию на основе пожеланий клиента, его образов        и ощущений.  подбираем мебель.
-                        li.stage
-                            .stage__rounds
-                                .stage__number 5
-                            h4.stage__title 3D Визуализация
-                            p.stage__text Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительным нормам..
-                        li.stage
-                            .stage__rounds
-                                .stage__number 6
-                            h4.stage__title Комплектация интерьера
-                            p.stage__text Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.
-        section#customer
-            .customer
-                .customer__background
-                .customer__img
-                .container
-                    .customer-form__block
-                        .customer-form
-                            h2.customer-form__title Мечтаете об интерьере от BRUME?
-                            .customer-form__subtitle Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.
-                            form.customer-form__form
-                                input(type='text' placeholder='Имя*' style='background-image: url("./assets/img/svg/name.svg")').customer-form__input
-                                input(type='tel' placeholder='Телефон*' style='background-image: url("./assets/img/svg/tel.svg")').customer-form__input
-                                input(type='email' placeholder='E-mail' style='background-image: url("./assets/img/svg/mail.svg")').customer-form__input
-                                button().button-customer Отправить
-                            p.customer-form__text Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных
-        section
-            .feedback-block
-                .container
-                    h2.feedback__title  Отзывы наших клиентов
-                    ul.feedback
-                        li.feedback__item
-                            .feedback__name Александра Холодная
-                            .feedback__servece Услуга: инерьер детской
-                            p.feedback__text Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!
-                            .feedback__avatar
-                                img(src='./assets/img/avatar1.jpg')
-                    ul.slider-buttons.slider-buttons_center
-                        li.slider-buttons__item
-                            a(href='#').slider-buttons__link
-                        li.slider-buttons__item
-                            a(href='#').slider-buttons__link
-                        li.slider-buttons__item
-                            a(href='#').slider-buttons__link
-                        li.slider-buttons__item.slider-buttons__item_active
-                            a(href='#').slider-buttons__link
-        footer
-            .footer-block
-                .container
-                    .footer
-                        .footer__copy BRUME interior, 2017
-                        .footer__center
-                            .footer__logo
-                                img(src='./assets/img/svg/logo-footer.svg')
-                            .footer__socials
-                                include ./common/socials
-                        .footer__design HolodnayaDesign
+                h2.stages__title Этапы работы
+                ul.stages__list
+                    li.stage
+                        .stage__rounds
+                            .stage__number 1
+                        .stage__title Консультация
+                        p.stage__text Обсуждаем задачи и пожелания, предлагаем варианты дизайна интерьера, оговариваем сроки.
+                    li.stage
+                        .stage__rounds
+                            .stage__number 2
+                        .stage__title Техническое задание
+                        p.stage__text Составляем техническое задание. Заключаем договор, в котором прописываем все этапы проекта.
+                    li.stage
+                        .stage__rounds
+                            .stage__number 3
+                        .stage__title Замеры и планировка
+                        p.stage__text Фиксируем размеры стен, окон, плинтусов, дверных проемов  для эффективной работы
+                    li.stage
+                        .stage__rounds
+                            .stage__number 4
+                        .stage__title Дизайн-концепция
+                        p.stage__text Создаем концепцию на основе пожеланий клиента, его образов        и ощущений.  подбираем мебель.
+                    li.stage
+                        .stage__rounds
+                            .stage__number 5
+                        .stage__title 3D Визуализация
+                        p.stage__text Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительным нормам..
+                    li.stage
+                        .stage__rounds
+                            .stage__number 6
+                        .stage__title Комплектация интерьера
+                        p.stage__text Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.
+        section#customer.customer
+            .customer__background
+            .customer__img
+            .container
+                .customer-form__block
+                    .customer-form
+                        h2.customer-form__title Мечтаете об интерьере от BRUME?
+                        .customer-form__subtitle Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.
+                        form.customer-form__form
+                            input(type='text' placeholder='Имя*' required).customer-form__input.customer-form__input_name
+                            input(type='tel' placeholder='Телефон*' required).customer-form__input.customer-form__input_tel
+                            input(type='email' placeholder='E-mail' required).customer-form__input.customer-form__input_mail
+                            button().button-customer Отправить
+                        p.customer-form__text Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных
+        section.feedback-block#feedback
+            .container
+                h2.feedback__title  Отзывы наших клиентов
+                ul.feedback
+                    li.feedback__item
+                        .feedback__name Александра Холодная
+                        .feedback__servece Услуга: инерьер детской
+                        p.feedback__text Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!
+                        .feedback__avatar
+                            img(src='./assets/img/avatar1.jpg')
+                ul.slider-buttons.slider-buttons_center
+                    li.slider-buttons__item.slider-buttons__item_active
+                        a(href='#').slider-buttons__link
+                    li.slider-buttons__item
+                        a(href='#').slider-buttons__link
+                    li.slider-buttons__item
+                        a(href='#').slider-buttons__link
+                    li.slider-buttons__item
+                        a(href='#').slider-buttons__link
+        footer.footer-block#footer
+            .container
+                .footer
+                    .footer__copy BRUME interior, 2017 ©
+                    .footer__center
+                        .footer__logo
+                            img(src='./assets/img/svg/logo-footer.svg')
+                        .footer__socials
+                            include ./common/socials
+                    .footer__design HolodnayaDesign
 
 
         script(src="./assets/js/foundation.js")

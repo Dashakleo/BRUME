@@ -9,6 +9,7 @@ button {
   cursor: pointer;
   &:hover {
     background-color: #f6a159;
+    border: none;
   }
 }
 
@@ -30,6 +31,7 @@ button {
   height: 64px;
   margin: 20px 0;
   font-size: 15px;
+  border-radius: 5px;
 }
 
 .button-services {

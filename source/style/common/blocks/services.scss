@@ -1,10 +1,10 @@
 .services {
   display: flex;
-  margin-bottom: 140px;
+  margin-bottom: 110px;
 }
 
 .services__title {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .services__menu {
@@ -34,7 +34,6 @@
 
 .services__content {
   flex: 3;
-  @extend %clearfix;
 }
 
 .services__tabcontent {
@@ -46,11 +45,10 @@
 }
 
 .services__image {
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 }
 
 .services__titles {
-  float: left;
   max-width: 490px;
 }
 .services__subtitle {
@@ -63,9 +61,13 @@
   font-size: 18px;
   line-height: 30px;
 }
+.services__bottom {
+  display: flex;
+}
 
 .services__description {
-  float: right;
+  text-align: right;
+  margin-left: auto;
 }
 
 .services__count {
@@ -73,6 +75,6 @@
   color: #182c3d;
   font-size: 18px;
   @include raleway(400);
-  margin-top: 5px;
-  margin-bottom: 75px;
+  margin-top: 10px;
+  margin-bottom: 72px;
 }

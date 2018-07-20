@@ -1,6 +1,6 @@
 .video {
   background: url("../img/video.jpg") no-repeat center center/cover;
-  height: 620px;
+  height: 600px;
   position: relative;
   &:after {
     content: '';
@@ -20,7 +20,7 @@
 
 .video__play {
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background-color: #febc80;
   opacity: 0.95;
   height: 85px;

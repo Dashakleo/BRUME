@@ -1,18 +1,30 @@
 .advantages {
-  height: 400px;
+  height: 500px;
   display: flex;
   margin-top: 130px;
   align-items: flex-start;
-  margin-bottom: 115px;
+  margin-bottom: 120px;
+  counter-reset: advantages;
 }
 
 .advantage {
   flex: 1;
+  margin-right: 45px;
   &:not(:last-child) {
-     margin-right: 45px;
+
    }
   &:nth-child(2n) {
     align-self: flex-end;
+  }
+  &:before {
+    counter-increment: advantages;
+    content: '0'counter(advantages);
+    color: #fea052;
+    @include playfair(700);
+    font-size: 80px;
+    opacity: 0.26;
+    margin-bottom: 10px;
+    display: block;
   }
 
   & p {

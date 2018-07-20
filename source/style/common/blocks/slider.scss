@@ -1,11 +1,9 @@
 .slider {
   position: relative;
   color: white;
-  @extend %clearfix;
 }
 
 .slider__img {
-  float: right;
 }
 
 .slider__block {
@@ -19,40 +17,41 @@
 .slider__headers {
   width: 375px;
   @include centered();
+  margin-top: 12px;
 }
 
 .slider__subtitle{
-    margin-top: 20px;
-    margin-bottom: 36px;
+    margin-top: 25px;
+    margin-bottom: 38px;
     width: 345px;
-  font-family: 'MullerLight', sans-serif;
+    font-family: 'MullerLight', sans-serif;
   }
-
-
 
 .slider__bottom {
   margin-bottom: 34px;
+  display: flex;
+  padding-top: 37px;
+  justify-content: space-between;
 }
 
 
 .slider-buttons {
   width: 50%;
-  float: right;
-  @extend %clearfix;
-  margin-top: -10px;
+  text-align: right;
+  height: 3px;
+  margin-top: -7px;
   &_center {
-    float: none;
     margin: 0 auto;
     width: 200px;
   }
 }
 
 .slider-buttons__item {
-  float: right;
   background-color: #1a444a;
   opacity: 0.21;
-  &:not(:first-child) {
-    margin-right: 12px;
+  display: inline-block;
+  &:not(:last-child) {
+    margin-right: 9px;
   }
   &_active {
     opacity: 1;

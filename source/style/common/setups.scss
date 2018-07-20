@@ -26,6 +26,7 @@ h1 {
   color: white;
   font-size: 61px;
   @include playfair(700);
+  line-height: 59px;
 }
 
 h2 {
