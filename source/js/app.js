@@ -2,47 +2,62 @@
 let slidesPortfolio = [{
     type: 'Дизайн интерьера',
     title: 'Дизайн интерьера гостинной',
-    img: 'url(./assets/img/portfolio1.jpg)'
+    img: './assets/img/portfolio1.jpg'
 }, {
     type: 'Отделочная работа',
     title: 'Дизайн интерьера гостинной',
-    img: 'url(./assets/img/portfolio2.jpg)'
+    img: './assets/img/portfolio2.jpg'
 }, {
     type: 'Дизайн интерьера',
     title: 'Дизайн столовой в стиле «Бохо»',
-    img: 'url(./assets/img/portfolio3.jpg)'
+    img: './assets/img/portfolio3.jpg'
 }, {
     type: 'Дизайн интерьера',
     title: 'Лофт интерьер для отеля Hiloft',
-    img: 'url(./assets/img/portfolio4.jpg)'
+    img: './assets/img/portfolio4.jpg'
 }, {
     type: 'Дизайн интерьера',
     title: 'Дизайн интерьера гостинной',
-    img: 'url(./assets/img/portfolio1.jpg)'
+    img: './assets/img/portfolio1.jpg'
 }, {
     type: 'Отделочная работа',
     title: 'Дизайн интерьера гостинной',
-    img: 'url(./assets/img/portfolio2.jpg)'
+    img: './assets/img/portfolio2.jpg'
 }, {
     type: 'Дизайн интерьера',
     title: 'Дизайн столовой в стиле «Бохо»',
-    img: 'url(./assets/img/portfolio3.jpg)'
+    img: './assets/img/portfolio3.jpg'
 }, {
     type: 'Дизайн интерьера',
     title: 'Лофт интерьер для отеля Hiloft',
-    img: 'url(./assets/img/portfolio4.jpg)'
+    img: './assets/img/portfolio4.jpg'
 }];
 
 let slidesPortfol = Array.prototype.slice.call(slidesPortfolio);
+let modal = document.getElementById('portfolioModal');
+let modalImg = document.getElementById("portfolioImg");
+let captionText = document.getElementById("portfolioDescription");
+let modalContent =document.querySelector('.modal-content');
+let slidesCounter = 1;
 
 const slidesDOM = (slide) => {
     const slideEl = document.createElement('li');
+    const slidePlus = document.createElement('div');
     const slideTitle = document.createElement('div');
     const slideType = document.createElement('div');
 
     slideEl.classList.add('glide__slide');
     slideEl.classList.add('portfolio-slider__item');
-    slideEl.style.background = `${slide.img} no-repeat center left/cover`;
+    slideEl.style.background = `url(${slide.img}) no-repeat center left/cover`;
+
+    slidePlus.classList.add('portfolio-slider__fullsize');
+    slidePlus.style.display = 'none';
+    slidePlus.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = slide.img;
+        captionText.innerHTML = slide.title;
+    };
+    slideEl.appendChild(slidePlus);
 
     slideTitle.innerHTML = slide.title;
     slideTitle.classList.add('portfolio-slider__title');
@@ -79,27 +94,41 @@ const slidesRender = async (slidesPortfolio, count = 4) => {
     glide.mount();
 
     //Прячет тип и тайтл при наведении
-    document.querySelector('.portfolio-slider').onmouseover = document.querySelector('.portfolio-slider').onmouseout = handler;
+    const sliderEl = document.querySelector('.portfolio-slider');
+    sliderEl.onmouseover = sliderEl.onmouseout = handler;
 
-    function handler(event) {
-        let otherSlides = document.querySelectorAll('.glide__slide.portfolio-slider__item');
-        otherSlides = Array.prototype.slice.call(otherSlides);
-        let children = event.target.children;
+    function handler(e) {
+        let target = e.target;
+       if (target.classList.contains('portfolio-slider__fullsize')) {
+           target = target.parentNode;
+       }
+        let children = target.children;
         children = Array.prototype.slice.call(children);
-        if (event.type === 'mouseover') {
+        if (e.type === 'mouseover') {
             children.forEach((child) => {
-                child.hidden = true;
+                !child.classList.contains('portfolio-slider__fullsize') ?  child.style.display = 'none' : child.style.display = 'block';
             })
         }
-        if (event.type === 'mouseout') {
+        if (e.type === 'mouseout') {
             children.forEach((child) => {
-                child.hidden = false;
+                !child.classList.contains('portfolio-slider__fullsize') ?  child.style.display = 'block' : child.style.display = 'none';
             })
         }
     }
 };
 slidesRender(slidesPortfolio);
 
+//Модальное окно при нажатии на плюс
+let closePortfolio = document.getElementsByClassName("close")[0];
+
+closePortfolio.onclick = function() {
+    modal.style.display = "none";
+};
+window.onclick = function(event) {
+    if (event.target === modal || event.target === modalContent) {
+        modal.style.display = "none";
+    }
+};
 
 //Сортировка
 const portfolioAll = document.querySelector('#portfolioAll');
@@ -175,14 +204,16 @@ menuIcon.onclick = function (e) {
     }
     target.classList.toggle("change");
     let menu = document.querySelector('#top-bar__menu');
+    let menuWhite = document.querySelector('.top-bar__logo_white');
     menu.hidden ? menu.hidden = false : menu.hidden = true;
+    if (document.querySelector("body").style.width < 980) {
+        menuWhite.style.display === 'none'? menuWhite.style.display = 'block' : menuWhite.style.display = 'none'
+    }
 };
-
 
 
 $(document).ready(function() {
     //slick
-    $('.single-item').slick();
     $(".feedback").slick({
         dots: true,
         speed: 500,
@@ -206,4 +237,18 @@ $(document).ready(function() {
         }
         return false;
     });
+
+    $('.button-header').click( function() {
+        $('html, body').animate({ scrollTop: $('#customer').offset().top }, 500);
+        return false;
+    });
+    $('.button-services').click( function() {
+        $('html, body').animate({ scrollTop: $('#customer').offset().top }, 500);
+        return false;
+    });
+
+
+
+
 });
+

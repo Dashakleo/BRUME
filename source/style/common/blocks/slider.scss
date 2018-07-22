@@ -7,6 +7,11 @@
 .slider__img {
   margin-bottom: 28px;
   height: 595px;
+  &-block {
+    @include small {
+      display: none;
+    }
+  }
 }
 
 .slider__block {
@@ -15,12 +20,21 @@
   position: absolute;
   top: 1px;
   height: 580px;
+  @include small {
+   height: 100vh;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .slider__headers {
   width: 375px;
   @include centered();
   margin-top: 12px;
+  @include small {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .slider__subtitle{
@@ -28,6 +42,11 @@
     margin-bottom: 38px;
     width: 345px;
     font-family: 'MullerLight', sans-serif;
+  @include small {
+    width: 80%;
+    font-size: 26px;
+    margin: 60px auto 70px auto;
+  }
   }
 
 .slider__bottom {
@@ -35,6 +54,9 @@
   display: flex;
   padding-top: 37px;
   justify-content: space-between;
+  @include small {
+    display: none;
+  }
 }
 
 .slider-buttons__link {

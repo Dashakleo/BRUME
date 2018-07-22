@@ -2,6 +2,9 @@ body {
   margin: 0;
   font-size: 16px;
   background-color: #fdfaf3;
+  @include small{
+  font-size: 18px;
+  }
 }
 
 ul {
@@ -22,11 +25,15 @@ h1, h2, h3, h4, h5 {
   font-weight: normal;
 }
 
-h1 {
+.h1 {
   color: white;
   font-size: 61px;
   @include playfair(700);
   line-height: 59px;
+  @include small {
+    font-size: 100px;
+    line-height: 100px;
+  }
 }
 
 h2 {
@@ -55,7 +62,11 @@ a {
   width: 1170px;
   margin: 0 auto;
   position: relative;
+  @include small {
+    width: 90%;
+  }
 }
+
 body *:not(.slick-track):not(.slick-list){
   transition: all 0.2s ease;
 }

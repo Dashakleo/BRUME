@@ -9,10 +9,19 @@
   background-color: white;
   margin: 6px 0;
   transition: 0.4s;
+  border-radius: 2px;
+  @include small {
+    height: 5px;
+    width: 64px;
+    margin: 14px 0;
+  }
 }
 
 .change .menu-icon__bar1 {
   transform: rotate(-45deg)  translate(-4px, 7px);
+  @include small {
+    transform: rotate(-45deg)  translate(-10px, 17px);
+  }
 }
 
 .change .menu-icon__bar2 {
@@ -21,4 +30,7 @@
 
 .change .menu-icon__bar3 {
   transform: rotate(45deg) translate(-4px, -7px) ;
+  @include small {
+    transform: rotate(45deg)  translate(-10px, -17px);
+  }
 }

@@ -1,5 +1,10 @@
 .header{
-  height: 700px;
+  //height: 700px;
+  @include small {
+    height: 100vh;
+    background: url("../img/header.jpg") no-repeat center center/cover;
+    width: 100%;
+  }
 }
 
 .hower {
@@ -9,6 +14,10 @@
   width: 50%;
   position: absolute;
   z-index: 10;
+  @include small {
+    width: 100%;
+    height: 100vh;
+  }
 }
 
 .top-bar {
@@ -19,10 +28,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  @include small {
+    position: absolute;
+    width: 100%;
+    z-index: 130;
+  }
 }
+
 .top-bar__menu-icon{
   margin-left: 7px;
+  @include small {
+    margin-left: auto;
+  }
 }
 
 .top-bar__menu {
@@ -32,6 +49,11 @@
   position: absolute;
   z-index: 100;
   animation: fadeEffect 0.4s;
+  @include small {
+    width: 98vw;
+    height: 100vh;
+    margin-left: -5vw;
+  }
 }
 .menu__content {
   @include centered();
@@ -56,6 +78,17 @@
 
 .top-bar__logo {
   @include centered(x);
+  @include small {
+    display: none;
+  }
+  &_white {
+    display: none;
+    width: 85px;
+    height: 45px;
+    @include small {
+      display: block;
+    }
+  }
 }
 
 .top-bar__tel {
@@ -66,5 +99,8 @@
   @include aColor(#252525);
   &-icon {
     margin-right: 10px;
+  }
+  @include small {
+    display: none;
   }
 }

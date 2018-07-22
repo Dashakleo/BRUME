@@ -16,10 +16,18 @@
 .button-header {
   height: 56px;
   padding: 0 29px;
-  display: flex;
   &:after {
     content: url(../img/arrow-right.png);
     margin-left: 22px;
+  }
+  @include small {
+    display: inline-block;
+    font-size: 30px;
+    height: 110px;
+    padding: 0 50px;
+    &:after {
+      content: none;
+    }
   }
 }
 

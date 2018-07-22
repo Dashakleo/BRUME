@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="assets/css/app.css">
   </head>
   <body>
-    <headerd id="header">
+    <header class="header" id="header">
       <div class="hower"></div>
       <div class="container">
-        <div class="top-bar">
+        <div class="top-bar"><img class="top-bar__logo_white" src="./assets/img/logo-footer.png">
           <div class="top-bar__menu-icon menu-icon" id="top-bar__menu-icon">
             <div class="menu-icon__bar1"></div>
             <div class="menu-icon__bar2"></div>
@@ -32,7 +32,7 @@
           <div class="slider__img-block"><img class="slider__img" src="./assets/img/header.jpg"><img class="slider__img" src="./assets/img/header2.jpg"><img class="slider__img" src="./assets/img/header3.jpg"><img class="slider__img" src="./assets/img/header4.jpg"><img class="slider__img" src="./assets/img/header5.jpg"></div>
           <div class="slider__block">
             <div class="slider__headers">
-              <h1>Дизайн интерьеров</h1>
+              <h1 class="h1">Дизайн интерьеров</h1>
               <div class="slider__subtitle">Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом</div>
               <button class="button button-header">Заказать дизайн</button>
             </div>
@@ -46,7 +46,7 @@
           </ul>
         </div>
       </div>
-    </headerd>
+    </header>
     <section id="advantages">
       <div class="container">
         <ul class="advantages">
@@ -81,6 +81,7 @@
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides portfolio-slider">
               <!--li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio1.jpg)')-->
+              <!--    a.portfolio-slider__fullsize-->
               <!--    .portfolio-slider__title Дизайн интерьера гостинной-->
               <!--    .portfolio-slider__type Дизайн интерьера-->
               <!--li.glide__slide.portfolio-slider__item(style='background-image: url(./assets/img/portfolio2.jpg)')-->
@@ -95,6 +96,16 @@
             </ul>
           </div>
           <div class="glide__arrows" data-glide-el="controls"><a class="glide__arrow glide__arrow--left arrow--left" data-glide-dir="&lt;"></a><a class="glide__arrow glide__arrow--right arrow--right" data-glide-dir="&gt;"></a></div>
+          <div class="portfolio-slider__modal" id="portfolioModal">
+            <div class="close menu-icon change">
+              <div class="menu-icon__bar1"></div>
+              <div class="menu-icon__bar2"></div>
+              <div class="menu-icon__bar3"></div>
+            </div>
+            <div class="modal-content"><img class="modal-content__img" id="portfolioImg">
+              <div id="portfolioDescription"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -256,7 +267,7 @@
             <input class="customer-form__input customer-form__input_name" type="text" placeholder="Имя*" required>
             <input class="customer-form__input customer-form__input_tel" type="tel" placeholder="Телефон*" required>
             <input class="customer-form__input customer-form__input_mail" type="email" placeholder="E-mail">
-            <button class="button button-customer">Отправить</button>
+            <button class="button button-customer" type="submit">Отправить</button>
           </form>
           <p class="customer-form__text">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
         </div>
