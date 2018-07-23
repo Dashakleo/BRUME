@@ -38,6 +38,12 @@
   }
 }
 
+@mixin w1200() {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin aColor($color) {
   color: $color;
   &:visited {

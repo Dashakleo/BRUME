@@ -206,7 +206,7 @@ menuIcon.onclick = function (e) {
     let menu = document.querySelector('#top-bar__menu');
     let menuWhite = document.querySelector('.top-bar__logo_white');
     menu.hidden ? menu.hidden = false : menu.hidden = true;
-    if (document.querySelector("body").style.width < 980) {
+    if (window.innerWidth < 992) {
         menuWhite.style.display === 'none'? menuWhite.style.display = 'block' : menuWhite.style.display = 'none'
     }
 };
@@ -244,6 +244,11 @@ $(document).ready(function() {
     });
     $('.button-services').click( function() {
         $('html, body').animate({ scrollTop: $('#customer').offset().top }, 500);
+        return false;
+    });
+
+    $('.header__arrow-down').click( function() {
+        $('html, body').animate({ scrollTop: $('#advantages').offset().top }, 500);
         return false;
     });
 

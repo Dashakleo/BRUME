@@ -1,12 +1,22 @@
 .customer {
   height: 683px;
   display: flex;
+  position: relative;
+  @include small {
+    height: 780px;
+  }
 }
 
 .customer__background {
   background-color: #182c3d;
   width: 50%;
   height: 100%;
+  @include small {
+    position: absolute;
+    width: 100%;
+    opacity: 0.9;
+    height: 100%;
+  }
 }
 
 .customer__img {
@@ -14,28 +24,45 @@
   height: 100%;
   width: 50%;
   overflow: hidden;
+  display: inline-block;
+  @include small {
+    width: 100%;
+  }
 }
 
 //form
 
-.customer-form__block {
+.customer__container {
+  @include centered(x);
+  padding-top: 66px;
+  @include small {
+    padding-top: 80px;
+  }
 
 }
 
-
 .customer-form {
   color: white;
-  width: 475px;
-  padding-top: 66px;
-  margin-left: auto;
-  margin-right: 100px;
+  width: 42%;
   margin-bottom: 85px;
+  @include small {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
 
 .customer-form__title {
   color: white;
   font-size: 41px;
+  width: 42%;
   margin-bottom: 20px;
+  @include small {
+    width: auto;
+    text-align: center;
+    font-size: 45px;
+  }
 }
 
 .customer-form__subtitle {
@@ -45,6 +72,10 @@
   opacity: 0.7;
   line-height: 24px;
   padding-right: 55px;
+  @include small {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
 }
 
 .customer-form__input {
@@ -74,9 +105,15 @@
   &::placeholder {
     color: white;
   }
+  @include small {
+    font-size: 18px;
+  }
 }
 
 .customer-form__text {
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
+  @include small {
+    font-size: 18px;
+  }
 }

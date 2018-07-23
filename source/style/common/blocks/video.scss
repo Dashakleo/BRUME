@@ -11,12 +11,18 @@
     height: 100%;
     z-index: 5;
   }
+  @include small {
+    height: 815px;
+  }
 }
 
 .video__text {
   @include centered();
   z-index: 10;
   text-align: center;
+  @include small {
+    width: 55%;
+  }
 }
 
 .video__play-icon  {
@@ -31,8 +37,19 @@
   position: relative;
 
   &:after {
-    content: url("../img/play.png");
+    content: '';
+    background: url("../img/play.png")no-repeat center center/ cover;
     @include centered()
+    width: 20px;
+    height: 25px;
+  }
+  @include small {
+    width: 130px;
+    height: 130px;
+    &:after {
+      width: 30px;
+      height: 35px;
+    }
   }
 }
 
@@ -40,4 +57,7 @@
   @include raleway(400);
   font-size: 18px;
   color: white;
+  @include small {
+    font-size: 22px;
+  }
 }

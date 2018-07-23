@@ -47,6 +47,9 @@ h4 {
   font-size: 22px;
   @include raleway(600);
   color: #1a292f;
+  @include small {
+    font-size: 24px;
+  }
 }
 
 * {
@@ -62,6 +65,9 @@ a {
   width: 1170px;
   margin: 0 auto;
   position: relative;
+  @include w1200 {
+    width: 90%;
+  }
   @include small {
     width: 90%;
   }

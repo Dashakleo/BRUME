@@ -10,6 +10,9 @@
 .feedback {
   margin: 0 auto;
   width: 85%;
+  @include small {
+    width: 100%;
+  }
 
 }
 
@@ -26,6 +29,9 @@
   position: relative;
   margin: 0 auto;
   margin-bottom: 68px;
+  @include small {
+    margin-right: 94px;
+  }
 }
 
 .feedback__name {
@@ -39,11 +45,17 @@
   @include raleway(700);
   color: #efb172;
   margin-bottom: 25px;
+  @include small {
+    font-size: 16px;
+  }
 }
 
 .feedback__text {
   line-height: 25px;
   padding-right: 140px;
+  @include small {
+    font-size: 16px;
+  }
 }
 
 .feedback__avatar {
@@ -53,4 +65,10 @@
   @include centered(y);
   right: -140px;
   margin-top: -10px;
+  @include small {
+    width: 188px;
+    right: 0;
+    transform: translateX(40%);
+    margin-top: -100px;
+  }
 }

@@ -27,15 +27,22 @@
         </div>
         <div class="slider">
           <div class="top-bar__menu" id="top-bar__menu" hidden="true">
-            <div class="menu__content"><a class="menu__item">Главная</a><a class="menu__item" href="#advantages">Преимущества</a><a class="menu__item" href="#portfolio">Портфолио</a><a class="menu__item" href="#services">Наши услуги</a><a class="menu__item" href="#customer">Контакты</a></div>
+            <div class="menu__content"><a class="menu__item">Главная</a><a class="menu__item" href="#advantages">Преимущества</a><a class="menu__item" href="#portfolio">Портфолио</a><a class="menu__item" href="#services">Наши услуги</a><a class="menu__item" href="#customer">Контакты</a>
+              <ul class="socials">
+                <li class="socials__item"><a class="socials__link socials__link_vk" href=""></a></li>
+                <li class="socials__item"><a class="socials__link socials__link_instagram" href=""></a></li>
+                <li class="socials__item"><a class="socials__link socials__link_facebook" href=""></a></li>
+              </ul>
+            </div>
           </div>
           <div class="slider__img-block"><img class="slider__img" src="./assets/img/header.jpg"><img class="slider__img" src="./assets/img/header2.jpg"><img class="slider__img" src="./assets/img/header3.jpg"><img class="slider__img" src="./assets/img/header4.jpg"><img class="slider__img" src="./assets/img/header5.jpg"></div>
-          <div class="slider__block">
-            <div class="slider__headers">
+          <div class="header__block">
+            <div class="header__headers">
               <h1 class="h1">Дизайн интерьеров</h1>
-              <div class="slider__subtitle">Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом</div>
+              <div class="header__subtitle">Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом</div>
               <button class="button button-header">Заказать дизайн</button>
             </div>
+            <div class="header__arrow-down"></div>
           </div>
         </div>
         <div class="slider__bottom">
@@ -259,9 +266,11 @@
       </div>
     </section>
     <section class="customer" id="customer">
-      <div class="customer__background">
+      <div class="customer__background"></div>
+      <div class="customer__img"></div>
+      <div class="container customer__container">
+        <h2 class="customer-form__title">Мечтаете об интерьере от BRUME?</h2>
         <div class="customer-form">
-          <h2 class="customer-form__title">Мечтаете об интерьере от BRUME?</h2>
           <div class="customer-form__subtitle">Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.</div>
           <form class="customer-form__form">
             <input class="customer-form__input customer-form__input_name" type="text" placeholder="Имя*" required>
@@ -272,7 +281,6 @@
           <p class="customer-form__text">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
         </div>
       </div>
-      <div class="customer__img"></div>
     </section>
     <section class="feedback-block" id="feedback">
       <div class="container">

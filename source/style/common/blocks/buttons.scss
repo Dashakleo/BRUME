@@ -37,6 +37,9 @@
   margin: 20px 0;
   font-size: 15px;
   border-radius: 5px;
+  @include small {
+    font-size: 18px;
+  }
 }
 
 .button-services {

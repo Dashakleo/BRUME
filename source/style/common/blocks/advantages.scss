@@ -5,14 +5,17 @@
   align-items: flex-start;
   margin-bottom: 120px;
   counter-reset: advantages;
+  @include small{
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-between;
+    margin-bottom: 160px;
+  }
 }
 
 .advantage {
-  flex: 1;
+  //flex: 1;
   margin-right: 45px;
-  &:not(:last-child) {
-
-   }
   &:nth-child(2n) {
     align-self: flex-end;
   }
@@ -26,6 +29,16 @@
     margin-bottom: 10px;
     display: block;
   }
+  @include small {
+    width: 40%;
+    &:nth-child(odd){
+      margin-bottom: 170px;
+      padding-top: 0;
+    }
+    &:before {
+      font-size: 85px;
+    }
+  }
 
   & p {
     @include raleway(300);
@@ -33,12 +46,4 @@
     margin-top: 20px;
     line-height: 25px;
   }
-}
-
-.advantage__count {
-  color: #fea052;
-  @include playfair(700);
-  font-size: 61px;
-  opacity: 0.26;
-  margin-bottom: 10px;
 }

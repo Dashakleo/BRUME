@@ -1,6 +1,10 @@
 .stages {
  margin-top: 125px;
   margin-bottom: 105px;
+  @include small {
+    margin-top: 180px;
+    margin-bottom: 95px;
+  }
 }
 
 .stages__title {
@@ -14,8 +18,13 @@
 }
 
 .stage {
-  width: 360px;
+  width: 33%;
+  max-width: 360px;
   margin-bottom: 38px;
+  @include small {
+    width: 50%;
+    margin-bottom: 70px;
+  }
 }
 
 .stage__rounds {
@@ -80,6 +89,8 @@
 
 .stage__text{
   margin-left: 83px;
-  width: 290px;
   line-height: 25px;
+  @include small {
+    font-size: 16px;
+  }
 }

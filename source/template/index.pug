@@ -37,17 +37,19 @@ html(lang='en')
                             a(href='#portfolio').menu__item Портфолио
                             a(href='#services').menu__item Наши услуги
                             a(href='#customer').menu__item Контакты
+                            include ./common/socials
                     .slider__img-block
                         img(src="./assets/img/header.jpg").slider__img
                         img(src="./assets/img/header2.jpg").slider__img
                         img(src="./assets/img/header3.jpg").slider__img
                         img(src="./assets/img/header4.jpg").slider__img
                         img(src="./assets/img/header5.jpg").slider__img
-                    .slider__block
-                        .slider__headers
+                    .header__block
+                        .header__headers
                             h1.h1 Дизайн интерьеров
-                            .slider__subtitle Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом
+                            .header__subtitle Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом
                             button.button.button-header Заказать дизайн
+                        .header__arrow-down
                 .slider__bottom
                     include ./common/socials
         section#advantages
@@ -221,8 +223,10 @@ html(lang='en')
                         p.stage__text Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.
         section#customer.customer
             .customer__background
+            .customer__img
+            .container.customer__container
+                h2.customer-form__title Мечтаете об интерьере от BRUME?
                 .customer-form
-                    h2.customer-form__title Мечтаете об интерьере от BRUME?
                     .customer-form__subtitle Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.
                     form.customer-form__form
                         input(type='text' placeholder='Имя*' required).customer-form__input.customer-form__input_name
@@ -230,7 +234,7 @@ html(lang='en')
                         input(type='email' placeholder='E-mail').customer-form__input.customer-form__input_mail
                         button(type= 'submit').button.button-customer Отправить
                     p.customer-form__text Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных
-            .customer__img
+
         section.feedback-block#feedback
             .container
                 h2.feedback__title  Отзывы наших клиентов
