@@ -44,6 +44,23 @@
   height: 100%;
   background: no-repeat center left/cover;
   position: relative;
+  &:hover {
+    flex: 1.4;
+  }
+  @include small {
+    margin: 0 40px;
+    &:hover {
+      flex: 1;
+    }
+  }
+}
+
+.glide__slide {
+  &:hover {
+    &:before {
+      opacity: 0;
+    }
+  }
   &:before {
     content: '';
     display: block;
@@ -52,10 +69,23 @@
     width: 100%;
     height: 100%;
   }
-  &:hover {
-    flex: 1.4;
-    &:before {
-      opacity: 0;
+  @include small {
+    &:hover {
+      &:before {
+        opacity: 0.8;
+      }
+    }
+  }
+  &--active {
+    @include small {
+      &:before {
+        opacity: 0;
+      }
+    }
+    &:hover {
+      &:before {
+        opacity: 0;
+      }
     }
   }
 }
@@ -84,6 +114,7 @@
   margin-top: -20px;
   background: url("../img/arrow2.png") no-repeat center center;
 }
+
 .arrow--right {
   background: url("../img/arrow1.png") no-repeat center center;
   border: none;
@@ -93,15 +124,17 @@
   box-shadow: none;
 }
 
-
 .portfolio-slider__title {
   color: white;
   position: absolute;
   top: 30px;
-  left:25px;
+  left: 25px;
   max-width: 154px;
   @include raleway(600);
-
+  @include small {
+    position: relative;
+    color: #182c3d;
+  }
 }
 
 .portfolio-slider__type {
@@ -111,6 +144,9 @@
   left: -40px;
   font-family: 'MullerLight', sans-serif;
   transform: rotate(-90deg);
+  @include small {
+    display: none;
+  }
 }
 
 //fullsize картинки
@@ -124,7 +160,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
@@ -141,7 +177,7 @@
   max-height: 80vh;
 }
 
-#portfolioDescription{
+#portfolioDescription {
   margin: auto;
   color: white;
   padding: 10px 0;
@@ -155,8 +191,12 @@
 }
 
 @keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
 }
 
 .close {

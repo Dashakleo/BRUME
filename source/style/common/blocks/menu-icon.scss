@@ -1,8 +1,9 @@
 //menu icon
-.menu-icon{
+.menu-icon {
   display: inline-block;
   cursor: pointer;
 }
+
 .menu-icon__bar1, .menu-icon__bar2, .menu-icon__bar3 {
   width: 26px;
   height: 2px;
@@ -18,9 +19,9 @@
 }
 
 .change .menu-icon__bar1 {
-  transform: rotate(-45deg)  translate(-4px, 7px);
+  transform: rotate(-45deg) translate(-4px, 7px);
   @include small {
-    transform: rotate(-45deg)  translate(-10px, 17px);
+    transform: rotate(-45deg) translate(-10px, 17px);
   }
 }
 
@@ -29,8 +30,8 @@
 }
 
 .change .menu-icon__bar3 {
-  transform: rotate(45deg) translate(-4px, -7px) ;
+  transform: rotate(45deg) translate(-4px, -7px);
   @include small {
-    transform: rotate(45deg)  translate(-10px, -17px);
+    transform: rotate(45deg) translate(-10px, -17px);
   }
 }

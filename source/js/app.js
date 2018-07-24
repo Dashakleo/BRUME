@@ -37,7 +37,7 @@ let slidesPortfol = Array.prototype.slice.call(slidesPortfolio);
 let modal = document.getElementById('portfolioModal');
 let modalImg = document.getElementById("portfolioImg");
 let captionText = document.getElementById("portfolioDescription");
-let modalContent =document.querySelector('.modal-content');
+let modalContent = document.querySelector('.modal-content');
 let slidesCounter = 1;
 
 const slidesDOM = (slide) => {
@@ -52,7 +52,7 @@ const slidesDOM = (slide) => {
 
     slidePlus.classList.add('portfolio-slider__fullsize');
     slidePlus.style.display = 'none';
-    slidePlus.onclick = function(){
+    slidePlus.onclick = function () {
         modal.style.display = "block";
         modalImg.src = slide.img;
         captionText.innerHTML = slide.title;
@@ -89,7 +89,17 @@ const slidesRender = async (slidesPortfolio, count = 4) => {
         perView: count,
         bound: true,
         startAt: 0,
-        gap: 0
+        gap: 0,
+        breakpoints: {
+            992: {
+                type: 'carousel',
+                perView: 1,
+                focusAt: 'center',
+                arrows: false,
+                peek: 100,
+                gap: 45
+            }
+        }
     });
     glide.mount();
 
@@ -97,22 +107,36 @@ const slidesRender = async (slidesPortfolio, count = 4) => {
     const sliderEl = document.querySelector('.portfolio-slider');
     sliderEl.onmouseover = sliderEl.onmouseout = handler;
 
+
     function handler(e) {
         let target = e.target;
-       if (target.classList.contains('portfolio-slider__fullsize')) {
-           target = target.parentNode;
-       }
+        if (target === document.querySelector('.glide__slides')) return;
+        if (target.classList.contains('portfolio-slider__fullsize')) {
+            target = target.parentNode;
+        }
         let children = target.children;
         children = Array.prototype.slice.call(children);
-        if (e.type === 'mouseover') {
-            children.forEach((child) => {
-                !child.classList.contains('portfolio-slider__fullsize') ?  child.style.display = 'none' : child.style.display = 'block';
-            })
-        }
-        if (e.type === 'mouseout') {
-            children.forEach((child) => {
-                !child.classList.contains('portfolio-slider__fullsize') ?  child.style.display = 'block' : child.style.display = 'none';
-            })
+        if (window.innerWidth > 992) {
+            if (e.type === 'mouseover') {
+                children.forEach((child) => {
+                    !child.classList.contains('portfolio-slider__fullsize') ? child.style.display = 'none' : child.style.display = 'block';
+                })
+            }
+            if (e.type === 'mouseout') {
+                children.forEach((child) => {
+                    !child.classList.contains('portfolio-slider__fullsize') ? child.style.display = 'block' : child.style.display = 'none';
+                })
+            }
+        } else {
+            let plusChild = children.find((child) => {
+                return child.classList.contains('portfolio-slider__fullsize')
+            });
+            if (e.type === 'mouseover') {
+                plusChild.style.display = 'none' ? plusChild.style.display = 'block' : plusChild.style.display = 'none'
+            }
+            if (e.type === 'mouseout') {
+                plusChild.style.display = 'none' ? plusChild.style.display = 'none' : plusChild.style.display = 'block'
+            }
         }
     }
 };
@@ -121,10 +145,10 @@ slidesRender(slidesPortfolio);
 //Модальное окно при нажатии на плюс
 let closePortfolio = document.getElementsByClassName("close")[0];
 
-closePortfolio.onclick = function() {
+closePortfolio.onclick = function () {
     modal.style.display = "none";
 };
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target === modal || event.target === modalContent) {
         modal.style.display = "none";
     }
@@ -207,12 +231,12 @@ menuIcon.onclick = function (e) {
     let menuWhite = document.querySelector('.top-bar__logo_white');
     menu.hidden ? menu.hidden = false : menu.hidden = true;
     if (window.innerWidth < 992) {
-        menuWhite.style.display === 'none'? menuWhite.style.display = 'block' : menuWhite.style.display = 'none'
+        menuWhite.style.display === 'none' ? menuWhite.style.display = 'block' : menuWhite.style.display = 'none'
     }
 };
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     //slick
     $(".feedback").slick({
         dots: true,
@@ -229,30 +253,28 @@ $(document).ready(function() {
     });
 
     //скролл
-    $('.menu__item').click( function() {
+    $('.menu__item').click(function () {
         let scroll_el = $(this).attr('href');
         document.querySelector('#top-bar__menu-icon').click();
         if ($(scroll_el).length !== 0) {
-            $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+            $('html, body').animate({scrollTop: $(scroll_el).offset().top}, 500);
         }
         return false;
     });
 
-    $('.button-header').click( function() {
-        $('html, body').animate({ scrollTop: $('#customer').offset().top }, 500);
+    $('.button-header').click(function () {
+        $('html, body').animate({scrollTop: $('#customer').offset().top}, 500);
         return false;
     });
-    $('.button-services').click( function() {
-        $('html, body').animate({ scrollTop: $('#customer').offset().top }, 500);
-        return false;
-    });
-
-    $('.header__arrow-down').click( function() {
-        $('html, body').animate({ scrollTop: $('#advantages').offset().top }, 500);
+    $('.button-services').click(function () {
+        $('html, body').animate({scrollTop: $('#customer').offset().top}, 500);
         return false;
     });
 
-
+    $('.header__arrow-down').click(function () {
+        $('html, body').animate({scrollTop: $('#advantages').offset().top}, 500);
+        return false;
+    });
 
 
 });

@@ -26,6 +26,13 @@
   }
 }
 
+@mixin aColor($color) {
+  color: $color;
+  &:visited {
+    color: $color;
+  }
+}
+
 @mixin small() {
   @media screen and (max-width: 992px) {
     @content;
@@ -44,9 +51,8 @@
   }
 }
 
-@mixin aColor($color) {
-  color: $color;
-  &:visited {
-    color: $color;
+@mixin h760() {
+  @media screen and (max-height: 760px) {
+    @content;
   }
 }

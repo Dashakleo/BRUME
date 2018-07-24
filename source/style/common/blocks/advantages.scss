@@ -5,7 +5,7 @@
   align-items: flex-start;
   margin-bottom: 120px;
   counter-reset: advantages;
-  @include small{
+  @include small {
     flex-wrap: wrap;
     height: auto;
     justify-content: space-between;
@@ -21,7 +21,7 @@
   }
   &:before {
     counter-increment: advantages;
-    content: '0'counter(advantages);
+    content: '0' counter(advantages);
     color: #fea052;
     @include playfair(700);
     font-size: 80px;
@@ -31,7 +31,7 @@
   }
   @include small {
     width: 40%;
-    &:nth-child(odd){
+    &:nth-child(odd) {
       margin-bottom: 170px;
       padding-top: 0;
     }

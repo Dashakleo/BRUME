@@ -25,7 +25,7 @@
   }
 }
 
-.video__play-icon  {
+.video__play-icon {
   margin: 0 auto;
   margin-bottom: 20px;
   background-color: #febc80;
@@ -38,7 +38,7 @@
 
   &:after {
     content: '';
-    background: url("../img/play.png")no-repeat center center/ cover;
+    background: url("../img/play.png") no-repeat center center/ cover;
     @include centered()
     width: 20px;
     height: 25px;

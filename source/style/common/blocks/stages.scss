@@ -1,5 +1,5 @@
 .stages {
- margin-top: 125px;
+  margin-top: 125px;
   margin-bottom: 105px;
   @include small {
     margin-top: 180px;
@@ -30,7 +30,7 @@
 .stage__rounds {
   width: 70px;
   height: 70px;
-  border: 1px solid rgba(249,137,93,0.03);
+  border: 1px solid rgba(249, 137, 93, 0.03);
   border-radius: 50%;
   margin-top: 5px;
   position: absolute;
@@ -69,7 +69,7 @@
   color: #00203a;
 }
 
-.stage__title{
+.stage__title {
   margin-left: 83px;
   margin-top: 25px;
   color: #313131;
@@ -87,7 +87,7 @@
   }
 }
 
-.stage__text{
+.stage__text {
   margin-left: 83px;
   line-height: 25px;
   @include small {

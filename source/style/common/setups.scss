@@ -2,8 +2,8 @@ body {
   margin: 0;
   font-size: 16px;
   background-color: #fdfaf3;
-  @include small{
-  font-size: 18px;
+  @include small {
+    font-size: 18px;
   }
 }
 
@@ -73,7 +73,7 @@ a {
   }
 }
 
-body *:not(.slick-track):not(.slick-list){
+body *:not(.slick-track):not(.slick-list) {
   transition: all 0.2s ease;
 }
 

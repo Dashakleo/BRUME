@@ -72,3 +72,9 @@
     margin-top: -100px;
   }
 }
+
+.glide__arrow {
+  @include small {
+    display: none;
+  }
+}
