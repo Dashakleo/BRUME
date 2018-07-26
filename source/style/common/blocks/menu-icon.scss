@@ -16,6 +16,11 @@
     width: 64px;
     margin: 14px 0;
   }
+  @include mini {
+    height: 3px;
+    width: 34px;
+    margin: 7px 0;
+  }
 }
 
 .change .menu-icon__bar1 {

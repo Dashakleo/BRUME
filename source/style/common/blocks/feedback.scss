@@ -1,6 +1,9 @@
 .feedback-block {
   padding-top: 145px;
-  margin-bottom: 176px;
+  padding-bottom: 176px;
+  @include small {
+    padding-bottom: 150px;
+  }
 }
 
 .feedback__title {
@@ -13,11 +16,12 @@
   @include small {
     width: 100%;
   }
-
 }
 
 .feedback__slide {
-
+  @include mini {
+    padding-top: 40px;
+  }
 }
 
 .feedback__item {
@@ -31,6 +35,13 @@
   margin-bottom: 68px;
   @include small {
     margin-right: 94px;
+  }
+  @include mini {
+    width: 100%;
+    height: auto;
+    padding: 195px 15px 55px 15px;
+    text-align: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -48,6 +59,9 @@
   @include small {
     font-size: 16px;
   }
+  @include mini {
+    font-size: 18px;
+  }
 }
 
 .feedback__text {
@@ -55,6 +69,10 @@
   padding-right: 140px;
   @include small {
     font-size: 16px;
+  }
+  @include mini {
+    font-size: 20px;
+    padding: 0;
   }
 }
 
@@ -70,6 +88,12 @@
     right: 0;
     transform: translateX(40%);
     margin-top: -100px;
+  }
+  @include mini {
+    width: 215px;
+    top: 60px;
+    height: 195px;
+    @include centered(x);
   }
 }
 

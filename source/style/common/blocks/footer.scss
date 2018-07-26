@@ -3,6 +3,9 @@
   height: 255px;
   color: #ffc487;
   @include raleway(500);
+  @include mini {
+    height: 410px;
+  }
 }
 
 .footer {
@@ -13,12 +16,28 @@
   @include small {
     font-size: 16px;
   }
+  @include mini {
+    height: 410px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .footer__copy {
+  @include mini {
+    order: 2;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 .footer__design {
+  @include mini {
+    order: 3;
+    font-size: 20px;
+  }
+
 }
 
 .footer__logo {
@@ -27,4 +46,7 @@
 
 .footer__socials {
   margin-top: 40px;
+  @include mini {
+    margin-bottom: 55px;
+  }
 }

@@ -97,6 +97,10 @@
     @include small {
       display: block;
     }
+    @include mini {
+      width: 37px;
+      height: 23px;
+    }
   }
 }
 
@@ -131,9 +135,6 @@
   width: 375px;
   @include centered();
   margin-top: 12px;
-  &:after {
-
-  }
   @include small {
     width: 100%;
     text-align: center;
@@ -150,6 +151,10 @@
     font-size: 26px;
     margin: 60px auto 70px auto;
   }
+  @include mini {
+    font-size: 18px;
+    margin: 25px auto;
+  }
 }
 
 .header__arrow-down {
@@ -162,12 +167,18 @@
   opacity: 0.8;
   @include small {
     display: block;
-  }
-  @include h760 {
-    display: none;
+    @include h760 {
+      display: none;
+    }
   }
   &:hover {
     opacity: 1;
+  }
+  @include mini {
+    display: block;
+    @include h550 {
+      display: none;
+    }
   }
 }
 

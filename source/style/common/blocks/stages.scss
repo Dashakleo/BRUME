@@ -1,14 +1,21 @@
 .stages {
-  margin-top: 125px;
-  margin-bottom: 105px;
+  padding-top: 125px;
+  padding-bottom: 105px;
   @include small {
-    margin-top: 180px;
-    margin-bottom: 95px;
+    padding-top: 180px;
+    padding-bottom: 95px;
+  }
+  @include mini {
+    padding-top: 115px;
+    padding-bottom: 115px;
   }
 }
 
 .stages__title {
   margin-bottom: 50px;
+  @include mini {
+    margin-bottom: 45px;
+  }
 }
 
 .stages__list {
@@ -24,6 +31,14 @@
   @include small {
     width: 50%;
     margin-bottom: 70px;
+  }
+  @include mini {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
   }
 }
 
@@ -54,6 +69,9 @@
     border-radius: 50%;
     opacity: 0.25;
   }
+  @include mini {
+    display: none;
+  }
 }
 
 .stage__number {
@@ -75,7 +93,6 @@
   color: #313131;
   font-size: 22px;
   @include raleway(600);
-  color: #1a292f;
   &:after {
     content: '';
     display: block;
@@ -85,6 +102,9 @@
     margin-top: 13px;
     margin-bottom: 20px;
   }
+  @include mini {
+    margin: 0;
+  }
 }
 
 .stage__text {
@@ -92,5 +112,9 @@
   line-height: 25px;
   @include small {
     font-size: 16px;
+  }
+  @include mini {
+    margin: 0;
+    font-size: 18px;
   }
 }

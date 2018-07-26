@@ -66,4 +66,17 @@
   &_facebook {
     width: 10px;
   }
+  @include mini {
+    height: 26px;
+    width: 27px;
+    &_vk {
+      height: 19px;
+      width: 30px;
+    }
+
+    &_facebook {
+      width: 13px;
+    }
+  }
+
 }

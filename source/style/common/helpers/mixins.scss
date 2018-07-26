@@ -56,3 +56,9 @@
     @content;
   }
 }
+
+@mixin h550() {
+  @media screen and (max-height: 550px) {
+    @content;
+  }
+}

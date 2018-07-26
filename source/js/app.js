@@ -69,7 +69,6 @@ const slidesDOM = (slide) => {
     slideEl.appendChild(slideType);
     return slideEl;
 };
-
 const slidesRender = async (slidesPortfolio, count = 4) => {
     const slidesEl = document.querySelector('.glide__track');
     slidesEl.innerHTML = '';
@@ -83,7 +82,6 @@ const slidesRender = async (slidesPortfolio, count = 4) => {
         slideList.appendChild(slideEl);
     });
     slidesEl.appendChild(slideList);
-
     let glide = new Glide('.glide', {
         type: 'slider',
         perView: count,
@@ -91,6 +89,10 @@ const slidesRender = async (slidesPortfolio, count = 4) => {
         startAt: 0,
         gap: 0,
         breakpoints: {
+            // 1800: {
+            //     peek: 0,
+            //     gap: 0
+            // },
             992: {
                 type: 'carousel',
                 perView: 1,
@@ -98,6 +100,13 @@ const slidesRender = async (slidesPortfolio, count = 4) => {
                 arrows: false,
                 peek: 100,
                 gap: 45
+            },
+            768: {
+                type: 'carousel',
+                perView: 1,
+                peek:0,
+                gap: 15,
+                arrows: false
             }
         }
     });
@@ -141,7 +150,6 @@ const slidesRender = async (slidesPortfolio, count = 4) => {
     }
 };
 slidesRender(slidesPortfolio);
-
 //Модальное окно при нажатии на плюс
 let closePortfolio = document.getElementsByClassName("close")[0];
 
@@ -241,7 +249,8 @@ $(document).ready(function () {
     $(".feedback").slick({
         dots: true,
         speed: 500,
-        slidesToShow: 1
+        slidesToShow: 1,
+        arrows: false
     });
     $(".slider__img-block").slick({
         dots: true,

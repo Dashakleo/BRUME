@@ -14,6 +14,9 @@
   @include small {
     height: 815px;
   }
+  @include mini {
+    height: 620px;
+  }
 }
 
 .video__text {
@@ -22,6 +25,9 @@
   text-align: center;
   @include small {
     width: 55%;
+  }
+  @include mini {
+    width: 90%;
   }
 }
 
@@ -40,8 +46,8 @@
     content: '';
     background: url("../img/play.png") no-repeat center center/ cover;
     @include centered()
-    width: 20px;
-    height: 25px;
+    width: 18px;
+    height: 21px;
   }
   @include small {
     width: 130px;
@@ -49,6 +55,14 @@
     &:after {
       width: 30px;
       height: 35px;
+    }
+  }
+  @include mini {
+    height: 85px;
+    width: 85px;
+    &:after {
+      width: 18px;
+      height: 21px;
     }
   }
 }

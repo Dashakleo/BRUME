@@ -29,6 +29,11 @@
       content: none;
     }
   }
+  @include mini {
+    font-size: 14px;
+    padding: 0 35px;
+    height: 56px;
+  }
 }
 
 .button-customer {
@@ -60,5 +65,10 @@
     margin-top: 35px;
     margin-right: 200px;
     margin-left: 0;
+  }
+  @include mini {
+    padding: 0 35px;
+    width: auto;
+    margin: 0 auto;
   }
 }

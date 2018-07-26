@@ -1,22 +1,30 @@
 .advantages {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  @include small {
+    padding-bottom: 160px;
+  }
+  @include mini {
+    padding-top: 75px;
+    padding-bottom: 70px;
+  }
+}
+
+.advantages-list {
   height: 500px;
   display: flex;
-  margin-top: 130px;
   align-items: flex-start;
-  margin-bottom: 120px;
   counter-reset: advantages;
   @include small {
     flex-wrap: wrap;
     height: auto;
     justify-content: space-between;
-    margin-bottom: 160px;
   }
 }
 
 .advantage {
-  //flex: 1;
   margin-right: 45px;
-  &:nth-child(2n) {
+  &:nth-child(even) {
     align-self: flex-end;
   }
   &:before {
@@ -37,6 +45,15 @@
     }
     &:before {
       font-size: 85px;
+      line-height: 85px;
+    }
+  }
+  @include mini {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    &:nth-child(odd) {
+      margin-bottom: 20px;
     }
   }
 
